@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <fragor>
- 
+  
+  <fraga id="1">Vilket land kommer det mobila betalningsföretaget iZettle ifrån?
+    <svarsalternativ id="1:1">Norge</svarsalternativ>
+    <svarsalternativ id="1:2">Sverige</svarsalternativ>
+  </fraga>
+
 </fragor>
