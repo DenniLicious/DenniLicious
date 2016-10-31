@@ -3,22 +3,47 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+    <head runat="server">
+        <link rel="stylesheet" href="main.css"/>
+        <title>Kompetensportalen</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">    
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <div class="page">
+        <form id="form1" runat="server">
+            <div class="header">
+                <a href="index.aspx">
+                <img src="images/logo.png"/>
+                </a>        	
+            </div>
 
-
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-        
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <header>Menyn ska vara här</header>
+        <div class="menu-wrap">
+            <nav class="menu">
+        <ul class="clearfix">
+            <li><a href="index.aspx">Hem</a></li>
+            <li>
+                <a href="#">Välj användare <span class="arrow">&#9660;</span></a>
+ 
+                <ul class="sub-menu">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Anställd</a></li>
+                    <li><a href="nyanstalld.aspx">Nyanställd</a></li>
+                </ul>
+            </li>
+        </ul>
+            </nav>
+        </div>
+            
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
     </form>
+    <footer>
+        &copy Dennilicious
+    </footer>
+    </div>
 </body>
 </html>
