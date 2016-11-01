@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
 using System.Xml;
 
 namespace G27_DenniLicious
@@ -13,79 +12,28 @@ namespace G27_DenniLicious
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string path = Server.MapPath("fragor.xml");
-            //XmlSwitchCase();
-            AppendCars(XMLToList());
-        }
-
-        public void AppendCars(List<TestFragor> allaFragor) //Metod 2
-        {
-            foreach (TestFragor tf in allaFragor)
-            {
-                HtmlGenericControl div = new HtmlGenericControl("div");
-                CheckBox cb = new CheckBox();
-                CheckBox cbb = new CheckBox();
-                //HtmlGenericControl svarA = new HtmlGenericControl("svarA");
-                //HtmlGenericControl svarB = new HtmlGenericControl("svarB");
-                
-                div.InnerText = tf.text;
-
-                //svarA.InnerText = tf.svarsalternativ;
-                //svarB.InnerText = tf.svarsalternativ1;
-                cb.Text = tf.svarsalternativ1;
-                cbb.Text = tf.svarsalternativ;
-                //+ " " + tf.svarsalternativ; //skulle kunna använda .InnerHtml
-                allafragor.Controls.Add(div);
-                //allafragor.Controls.Add(svarA);
-                //allafragor.Controls.Add(svarB);
-                allafragor.Controls.Add(cb);
-                
-                allafragor.Controls.Add(cbb);
-                
-            }
-        }
-
-        public List<TestFragor> XMLToList()
-        {
-            List<TestFragor> Test = new List<TestFragor>();
-
             string path = Server.MapPath("fragor.xml");
-            XmlDocument doc = new XmlDocument();
-            doc.Load(path);
-
-            XmlNodeList allaFragor = doc.SelectNodes("/fragor/produkter/fraga");
-
-            foreach (XmlNode node in allaFragor)
-            {
-                TestFragor tf = new TestFragor();
-                tf.text = node["text"].InnerText;
-                tf.svarsalternativ = node["svarsalternativ"].InnerText;
-                tf.svarsalternativ1 = node["svarsalternativ1"].InnerText;
-                Test.Add(tf);
-            }
-
-            return Test;
-
+            XmlSwitchCase();
         }
 
-        //public void XmlSwitchCase()
-        //{
-        //    string fragor = "";
-        //    string path = Server.MapPath("fragor.xml");
-        //    XmlTextReader xreader = new XmlTextReader(path);
+        public void XmlSwitchCase()
+        {
+            string fragor = "";
+            string path = Server.MapPath("fragor.xml");
+            XmlTextReader xreader = new XmlTextReader(path);
 
-        //    //läser igenom Xml-filen
-        //    while (xreader.Read())
-        //    {
-        //        switch (xreader.Name)
-        //        {
-        //            case "text":
-        //                fragor += xreader.ReadString();
-        //                break;
-        //        }
-        //    }
+            //läser igenom Xml-filen
+            while (xreader.Read())
+            {
+                switch (xreader.Name)
+                {
+                    case "text":
+                        fragor += xreader.ReadString();
+                        break;
+                }
+            }
 
-        //    allafragor.InnerHtml = fragor;
-        //}
+            allafragor.InnerHtml = fragor;
+        }
     }
 }

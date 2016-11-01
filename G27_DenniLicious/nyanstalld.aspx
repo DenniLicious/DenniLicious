@@ -4,10 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="allafragor" runat="server"></div>
         
-    
-    <div id="svar1" runat="server"></div>
-    <div id="svar2" runat="server"></div>
-
 </asp:Content>
 
 
