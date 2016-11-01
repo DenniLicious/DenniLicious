@@ -1,7 +1,25 @@
 ﻿<%@ Page Title="Startsida" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="G27_DenniLicious.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div class="menu-wrap">
+            <nav class="menu">
+        <ul class="clearfix">
+            <li><a href="index.aspx">Hem</a></li>
+            <li>
+                <a href="#">Välj användare <span class="arrow">&#9660;</span></a>
+ 
+                <ul class="sub-menu">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Anställd</a></li>
+                    <li><a href="nyanstalld.aspx">Nyanställd</a></li>
+                </ul>
+            </li>
+        </ul>
+            </nav>
+        </div>
     <h1>Välkommen till Kompetensportalen</h1>
             <br />
             <h3>För att komma åt det anpassade innehållet på Kompetensportalen måste du välja användar-typ. 

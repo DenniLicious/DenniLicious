@@ -17,23 +17,6 @@
                 <img src="images/logo.png"/>
                 </a>        	
             </div>
-
-        <div class="menu-wrap">
-            <nav class="menu">
-        <ul class="clearfix">
-            <li><a href="index.aspx">Hem</a></li>
-            <li>
-                <a href="#">Välj användare <span class="arrow">&#9660;</span></a>
- 
-                <ul class="sub-menu">
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">Anställd</a></li>
-                    <li><a href="nyanstalld.aspx">Nyanställd</a></li>
-                </ul>
-            </li>
-        </ul>
-            </nav>
-        </div>
             
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -41,9 +24,10 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    <footer>
-        &copy Dennilicious
-    </footer>
+    <div class="footer">
+        &copy JE Banken <br />
+        Dennilicious
+    </div>
     </div>
 </body>
 </html>
