@@ -4,13 +4,13 @@
   <produkter>
     <fraga id="1">
       <text>Vilket land kommer det mobila betalningsföretaget iZettle ifrån?</text>
-      <svarsalternativ id="1:1" svar="false">Norge</svarsalternativ>
-      <svarsalternativ id="1:2" svar="true">Sverige</svarsalternativ>
+      <svarsalternativ id="1" svar="false">Norge</svarsalternativ>
+      <svarsalternativ id="2" svar="true">Sverige</svarsalternativ>
     </fraga>
     <fraga id="2">
       <text>Vad heter de två sidorna i ett T-konto?</text>
-      <svarsalternativ id="2:1" svar="true">Debet</svarsalternativ>
-      <svarsalternativ id="2:2" svar="true">Kredit</svarsalternativ>
+      <svarsalternativ id="1" svar="true">Debet</svarsalternativ>
+      <svarsalternativ id="2" svar="true">Kredit</svarsalternativ>
     </fraga>
   </produkter>
 
