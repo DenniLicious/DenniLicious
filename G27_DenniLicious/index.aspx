@@ -17,6 +17,11 @@
                     <li><a href="nyanstalld.aspx">Nyanställd</a></li>
                 </ul>
             </li>
+            <li>
+            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="menu-wrap">
+
+            </asp:DropDownList>
+            </li>
         </ul>
             </nav>
         </div>

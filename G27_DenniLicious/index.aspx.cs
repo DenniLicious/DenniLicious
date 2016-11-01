@@ -11,7 +11,9 @@ namespace G27_DenniLicious
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //metod för att lägga till medlem - fungerar
+            //Db dennis = new Db();
+            //dennis.testar();
         }
     }
 }
