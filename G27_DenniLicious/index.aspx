@@ -11,7 +11,7 @@
             <li>
                 <a href="#">Välj användare <span class="arrow">&#9660;</span></a>
  
-                <ul class="sub-menu">
+                <ul class="sub-menu" id="dropdown" runat="server">
                     <li><a href="#">Admin</a></li>
                     <li><a href="#">Anställd</a></li>
                     <li><a href="nyanstalld.aspx">Nyanställd</a></li>
