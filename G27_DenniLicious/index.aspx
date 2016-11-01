@@ -18,9 +18,13 @@
                 </ul>
             </li>
             <li>
-            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="menu-wrap">
+            <asp:DropDownList ID="DropDownList1" runat="server"> <%--CssClass="menu-wrap">--%>
 
             </asp:DropDownList>
+            </li>
+            <li>
+            <asp:Button ID="LoggaInKnapp" runat="server" Text="Logga in" OnClick="LoggaInKnapp_Click"/>
+
             </li>
         </ul>
             </nav>

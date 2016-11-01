@@ -40,6 +40,74 @@ namespace G27_DenniLicious
             }
         }
 
+        public List<Anvandare> Anvandarna()
+        {
+            string sql = "SELECT * FROM anvandare";
+            dr = sqlFråga(sql);
+
+            Anvandare a;
+            List<Anvandare> AL = new List<Anvandare>();
+
+            while (dr.Read())
+            {
+                a = new Anvandare()
+                {
+                    Id = (int)dr["id"],
+                    Namn = dr["namn"].ToString(),
+                    Typ = dr["typ"].ToString()
+                };
+
+                AL.Add(a);
+            }
+            return AL;
+
+        }
+        public string[] ValdAnvandare(int userid)
+        {
+            string sql = "select * from anvandare a where a.id = '" + userid + "'";
+            dr = sqlFråga(sql);
+            string[] vald = new string[]{"", "", ""};
+
+            while (dr.Read())
+            {
+                int Id = (int)dr["id"];
+                string idd = Id.ToString();
+                string Namn = dr["namn"].ToString();
+                string Typ = dr["typ"].ToString();
+
+            vald = new string[]
+                {
+                    idd,
+                    Namn,
+                    Typ
+                };
+            }
+                
+
+                return vald;
+            
+        }
+
+
+        //public void ValdAnvandare(int userid)
+        //{
+        //    string sql = "select * from anvandare a where a.id = '" + userid + "'";
+        //    dr = sqlFråga(sql);
+
+        //    Anvandare vald;
+
+        //    while (dr.Read())
+        //    {
+        //        vald = new Anvandare()
+        //        {
+        //            Id = (int)dr["id"],
+        //            Namn = dr["namn"].ToString(),
+        //            Typ = dr["typ"].ToString()
+        //        };
+
+
+        //    }
+        //}
         //metod för att testa att kopplingen till databasen funkar - lägger till medlem, YES
         //public void testar()
         //{
