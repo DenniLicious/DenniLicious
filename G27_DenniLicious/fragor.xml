@@ -12,7 +12,7 @@
       <text>Vad heter de två sidorna i ett T-konto?</text>
       <svarsalternativ id="1" svar="true">Debet</svarsalternativ>
       <svarsalternativ id="2" svar="true">Kredit</svarsalternativ>
-      <svarsalternativ id="2" svar="false">Sparkonto</svarsalternativ>
+      <svarsalternativ id="3" svar="false">Sparkonto</svarsalternativ>
     </fraga>
   </produkter>
 
