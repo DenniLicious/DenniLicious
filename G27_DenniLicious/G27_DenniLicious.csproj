@@ -57,13 +57,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fragor.xml" />
+    <Content Include="fragor.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="images\logo.png" />
     <Content Include="index.aspx" />
+    <Content Include="main.css" />
     <Content Include="nyanstalld.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestFragor.cs" />
+    <Compile Include="Anvandare.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
