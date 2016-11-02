@@ -12,17 +12,21 @@ namespace G27_DenniLicious
         List<Anvandare> Anvandarlista = new List<Anvandare>();
         Db Databas = new Db();
         //Anvandare aktuellA = new Anvandare();
-
+        string aktuell = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Anvandarlista = Databas.Anvandarna();
-            
+            if (!IsPostBack)
+            {
+                Anvandarlista = Databas.Anvandarna();
 
-            DropDownList1.DataSource = Anvandarlista;
-            DropDownList1.DataTextField = "namn";
-            DropDownList1.DataValueField = "id";
-            DropDownList1.DataBind();
+                
+                DropDownList1.DataTextField = "namn";
+                DropDownList1.DataValueField = "id";
+                DropDownList1.DataSource = Anvandarlista;
+                DropDownList1.DataBind();
+            }
+
             //metod för att lägga till medlem - fungerar
             //Db dennis = new Db();
             //dennis.testar();
@@ -30,11 +34,12 @@ namespace G27_DenniLicious
 
         protected void LoggaInKnapp_Click(object sender, EventArgs e)
         {
-            string aktuell = DropDownList1.SelectedValue;
+            
             int va = int.Parse(aktuell);
             string[] aktuellA = { "", "", "" };
             aktuellA = Databas.ValdAnvandare(va);
             //Databas.ValdAnvandare(va);
+            
             
             
             
@@ -43,6 +48,11 @@ namespace G27_DenniLicious
             {
                 Response.Redirect("nyanstalld.aspx");
             }
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            aktuell = DropDownList1.SelectedValue;
         }
     }
 }

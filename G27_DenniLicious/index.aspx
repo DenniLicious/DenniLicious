@@ -18,7 +18,7 @@
                 </ul>
             </li>
             <li>
-            <asp:DropDownList ID="DropDownList1" runat="server"> <%--CssClass="menu-wrap">--%>
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"> <%--CssClass="menu-wrap">--%>
 
             </asp:DropDownList>
             </li>
