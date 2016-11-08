@@ -12,7 +12,7 @@ namespace G27_DenniLicious
         List<Anvandare> Anvandarlista = new List<Anvandare>();
         Db Databas = new Db();
         //Anvandare aktuellA = new Anvandare();
-        string aktuell = "";
+        string aktuell = "1";
 
         protected void Page_Load(object sender, EventArgs e)
         {
