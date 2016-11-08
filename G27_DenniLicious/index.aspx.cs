@@ -39,15 +39,22 @@ namespace G27_DenniLicious
             string[] aktuellA = { "", "", "" };
             aktuellA = Databas.ValdAnvandare(va);
             //Databas.ValdAnvandare(va);
-            
-            
+
+
+            Session["anvandarId"] = va;
             
             
 
-            if(aktuellA[2] == "Nyanställd")
+            if(aktuellA[2] == "Nyanställd" || aktuellA[2] == "Anställd")
             {
-                Response.Redirect("nyanstalld.aspx");
+                Response.Redirect("startaTest.aspx");
             }
+
+            else if (aktuellA[2]=="Admin")
+            {
+                Response.Redirect("admin.aspx");
+            }
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
