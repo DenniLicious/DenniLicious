@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin.aspx" />
+    <Content Include="akutest.aspx" />
     <Content Include="fragor.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -74,7 +75,7 @@
     <Content Include="main.css" />
     <Content Include="npsql\Mono.Security.dll" />
     <Content Include="npsql\Npgsql.dll" />
-    <Content Include="nyanstalld.aspx" />
+    <Content Include="licensieringstest.aspx" />
     <Content Include="startaTest.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -86,6 +87,13 @@
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="akutest.aspx.cs">
+      <DependentUpon>akutest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="akutest.aspx.designer.cs">
+      <DependentUpon>akutest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Anvandare.cs" />
     <Compile Include="Db.cs" />
     <Compile Include="index.aspx.cs">
@@ -95,12 +103,12 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="nyanstalld.aspx.cs">
-      <DependentUpon>nyanstalld.aspx</DependentUpon>
+    <Compile Include="licensieringstest.aspx.cs">
+      <DependentUpon>licensieringstest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="nyanstalld.aspx.designer.cs">
-      <DependentUpon>nyanstalld.aspx</DependentUpon>
+    <Compile Include="licensieringstest.aspx.designer.cs">
+      <DependentUpon>licensieringstest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
