@@ -47,12 +47,12 @@ namespace G27_DenniLicious
 
             if(aktuellA[2] == "Nyanställd" || aktuellA[2] == "Anställd")
             {
-                Response.Redirect("startaTest.aspx");
+                Response.Redirect("StartaTest.aspx");
             }
 
             else if (aktuellA[2]=="Admin")
             {
-                Response.Redirect("admin.aspx");
+                Response.Redirect("Admin.aspx");
             }
 
         }

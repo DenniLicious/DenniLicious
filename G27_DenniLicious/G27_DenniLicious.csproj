@@ -65,34 +65,34 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin.aspx" />
-    <Content Include="akutest.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="AKUtest.aspx" />
     <Content Include="fragor.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="images\logo.png" />
     <Content Include="index.aspx" />
+    <Content Include="Licensieringstest.aspx" />
     <Content Include="main.css" />
     <Content Include="npsql\Mono.Security.dll" />
     <Content Include="npsql\Npgsql.dll" />
-    <Content Include="licensieringstest.aspx" />
-    <Content Include="startaTest.aspx" />
+    <Content Include="StartaTest.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="akutest.aspx.cs">
-      <DependentUpon>akutest.aspx</DependentUpon>
+    <Compile Include="AKUtest.aspx.cs">
+      <DependentUpon>AKUtest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="akutest.aspx.designer.cs">
-      <DependentUpon>akutest.aspx</DependentUpon>
+    <Compile Include="AKUtest.aspx.designer.cs">
+      <DependentUpon>AKUtest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Anvandare.cs" />
     <Compile Include="Db.cs" />
@@ -103,12 +103,12 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="licensieringstest.aspx.cs">
-      <DependentUpon>licensieringstest.aspx</DependentUpon>
+    <Compile Include="Licensieringstest.aspx.cs">
+      <DependentUpon>Licensieringstest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="licensieringstest.aspx.designer.cs">
-      <DependentUpon>licensieringstest.aspx</DependentUpon>
+    <Compile Include="Licensieringstest.aspx.designer.cs">
+      <DependentUpon>Licensieringstest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -118,12 +118,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="startaTest.aspx.cs">
-      <DependentUpon>startaTest.aspx</DependentUpon>
+    <Compile Include="StartaTest.aspx.cs">
+      <DependentUpon>StartaTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="startaTest.aspx.designer.cs">
-      <DependentUpon>startaTest.aspx</DependentUpon>
+    <Compile Include="StartaTest.aspx.designer.cs">
+      <DependentUpon>StartaTest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
