@@ -8,15 +8,14 @@
             <nav class="menu">
         <ul class="clearfix">
             <li><a href="index.aspx">Hem</a></li>
-            <li>
+            <%--<li>
                 <a href="#">Välj användare <span class="arrow">&#9660;</span></a>
- 
                 <ul class="sub-menu" id="dropdown" runat="server">
                     <li><a href="#">Admin</a></li>
                     <li><a href="#">Anställd</a></li>
                     <li><a href="nyanstalld.aspx">Nyanställd</a></li>
                 </ul>
-            </li>
+            </li>--%>
             <li>
             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"> <%--CssClass="menu-wrap">--%>
 

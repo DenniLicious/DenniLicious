@@ -10,6 +10,6 @@
 namespace G27_DenniLicious {
     
     
-    public partial class Licensieringstest {
+    public partial class LoggaUt {
     }
 }

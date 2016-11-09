@@ -2,4 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="menu-wrap">
+            <nav class="menu">
+        <ul class="clearfix">
+            <li><a href=".aspx">Logga ut</a></li>
+        </ul>
+            </nav>
+        </div>
+    <h1>Kompetensportalens Licensieringstest</h1>
+
+            <h3>Bla bla bla.</h3>
 </asp:Content>

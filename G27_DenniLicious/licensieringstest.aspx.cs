@@ -11,7 +11,28 @@ namespace G27_DenniLicious
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //string path = Server.MapPath("fragor.xml");
+            //XmlSwitchCase();
         }
+        
+        //public void XmlSwitchCase()
+        //{
+        //    string fragor = "";
+        //    string path = Server.MapPath("fragor.xml");
+        //    XmlTextReader xreader = new XmlTextReader(path);
+
+        //    //läser igenom Xml-filen
+        //    while (xreader.Read())
+        //    {
+        //        switch (xreader.Name)
+        //        {
+        //            case "text":
+        //                fragor += xreader.ReadString();
+        //                break;
+        //        }
+        //    }
+
+        //    allafragor.InnerHtml = fragor;
+        //}
     }
 }
