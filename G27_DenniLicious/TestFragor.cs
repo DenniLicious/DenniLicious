@@ -5,7 +5,7 @@ using System.Web;
 
 namespace G27_DenniLicious
 {
-    public class TestFragor
+    public class Testfragor
     {
         public string text { get; set; }
         public string svarsalternativ { get; set; }

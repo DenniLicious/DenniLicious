@@ -12,4 +12,10 @@
     <h1>Kompetensportalens Licensieringstest</h1>
 
             <h3>Bla bla bla.</h3>
+
+    <div id="allafragor" runat="server"></div>
+        
+    
+    <div id="svar1" runat="server"></div>
+    <div id="svar2" runat="server"></div>
 </asp:Content>

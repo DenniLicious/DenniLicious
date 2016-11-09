@@ -133,6 +133,7 @@
     <Compile Include="StartaTest.aspx.designer.cs">
       <DependentUpon>StartaTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Testfragor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
