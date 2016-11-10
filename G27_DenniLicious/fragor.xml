@@ -1,18 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<!--rotelement-->
 <fragor>
+  <!--föräldraelement-->
   <produkter>
+    <!--barnelement-->
     <fraga id="1">
+      <!--attribut-->
       <text>Vilket land kommer det mobila betalningsföretaget iZettle ifrån?</text>
-      <svarsalternativ id="1" svar="false">Norge</svarsalternativ>
-      <svarsalternativ id="2" svar="true">Sverige</svarsalternativ>
-      <svarsalternativ id="3" svar="false">Danmark</svarsalternativ>
+      <svarsalternativ svar="false">Norge</svarsalternativ>
+      <svarsalternativ svar="true">Sverige</svarsalternativ>
+      <svarsalternativ svar="false">Danmark</svarsalternativ>
     </fraga>
     <fraga id="2">
       <text>Vad heter de två sidorna i ett T-konto?</text>
-      <svarsalternativ id="1" svar="true">Debet</svarsalternativ>
-      <svarsalternativ id="2" svar="true">Kredit</svarsalternativ>
-      <svarsalternativ id="3" svar="false">Sparkonto</svarsalternativ>
+      <svarsalternativ svar="true">Debet</svarsalternativ>
+      <svarsalternativ svar="true">Kredit</svarsalternativ>
+      <svarsalternativ svar="false">Sparkonto</svarsalternativ>
     </fraga>
   </produkter>
 

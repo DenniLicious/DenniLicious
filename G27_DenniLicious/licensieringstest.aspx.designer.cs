@@ -11,5 +11,32 @@ namespace G27_DenniLicious {
     
     
     public partial class Licensieringstest {
+        
+        /// <summary>
+        /// allafragor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl allafragor;
+        
+        /// <summary>
+        /// alternativen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alternativen;
+        
+        /// <summary>
+        /// rattasvaret control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rattasvaret;
     }
 }

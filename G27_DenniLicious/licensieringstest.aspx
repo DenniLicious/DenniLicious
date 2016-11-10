@@ -12,4 +12,8 @@
     <h1>Kompetensportalens Licensieringstest</h1>
 
             <h3>Bla bla bla.</h3>
+    
+    <div id="allafragor" runat="server"></div>
+    <div id="alternativen" runat="server"></div>
+    <div id="rattasvaret" runat="server"></div>
 </asp:Content>
