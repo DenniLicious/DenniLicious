@@ -5,7 +5,7 @@
     <div class="menu-wrap">
             <nav class="menu">
         <ul class="clearfix">
-            <li><a href=".aspx">Logga ut</a></li>
+            <li><a href="LoggaUt.aspx">Logga ut</a></li>
         </ul>
             </nav>
         </div>
