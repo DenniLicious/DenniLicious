@@ -28,26 +28,37 @@ namespace G27_DenniLicious
             //läser igenom Xml-filen
             while (xreader.Read())
             {
-                //HtmlGenericControl fragan = new HtmlGenericControl("div");
+                HtmlGenericControl div1 = new HtmlGenericControl("div");
+                HtmlGenericControl div2 = new HtmlGenericControl("div");
+                CheckBox cb = new CheckBox();
                 //CheckBox cb1 = new CheckBox();
                 switch (xreader.Name)
                 {
                     case "text":
+                        
                         //fragan.InnerHtml = xreader.ReadString();
                         //fragan.Controls.Add(fragan);
-                        fragor += xreader.ReadString();
+                        div1.InnerText = xreader.ReadString();
+                        //fragor += xreader.ReadString();
+                        allafragor.Controls.Add(div1);
                         break;
 
                     case "svarsalternativ":
                         //Visar facit
-                        rattSvar += xreader.GetAttribute("svar");
+                        rattSvar = xreader.GetAttribute("svar");
+                        //div2.InnerText = rattSvar;
+                        //allafragor.Controls.Add(div2);
                         //Måste ligga under rattSvar, annars funkar inte rattSvar.
-                        alternativ += xreader.ReadString();                        
+                       
+                        alternativ = xreader.ReadString();
+                        cb.Text = alternativ;
+                        allafragor.Controls.Add(cb);
+
                         break;
                 }
-                allafragor.InnerHtml = fragor; //+ alternativ + rattSvar;
-            alternativen.InnerHtml = alternativ;
-            rattasvaret.InnerHtml = rattSvar;
+                //allafragor.InnerHtml = fragor; //+ alternativ + rattSvar;
+            //alternativen.InnerHtml = alternativ;
+            //rattasvaret.InnerHtml = rattSvar;
             }
 
             
