@@ -68,6 +68,8 @@
     <Content Include="Admin.aspx" />
     <Content Include="aku.xml" />
     <Content Include="AKUtest.aspx" />
+    <Content Include="images\bjornbanck.jpg" />
+    <Content Include="images\logoutext.png" />
     <Content Include="licensiering.xml">
       <SubType>Designer</SubType>
     </Content>

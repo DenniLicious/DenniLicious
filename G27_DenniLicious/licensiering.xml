@@ -66,15 +66,107 @@
       <svarsalternativ svar="false">Mekroekonomi</svarsalternativ>
       <svarsalternativ svar="true">Mikroekonomi</svarsalternativ>
     </fraga>
-    
-    
+    <fraga id="10">
+      <text>Vad kallas det när en valutas värde stiger i förhållande till andra valutors?</text>
+      <svarsalternativ svar="false">Depreciering</svarsalternativ>
+      <svarsalternativ svar="false">Applicering</svarsalternativ>
+      <svarsalternativ svar="true">Appreciering</svarsalternativ>
+    </fraga>
+    <fraga id="11">
+      <text>Vad är detta en definition av: Värde av alla de varor och tjänster som produceras i ett land för att användas till konsumtion, export och investeringar under en period, vanligtvis ett år eller ett kvartal.?</text>
+      <svarsalternativ svar="false">Export</svarsalternativ>
+      <svarsalternativ svar="true">Bruttonationalprodukt</svarsalternativ>
+      <svarsalternativ svar="false">Konsumering</svarsalternativ>
+    </fraga>
+    <fraga id="12">
+      <text>Vilken Bank är det här?</text>
+      <bild img="/images/bjornbanck.jpg"></bild>
+      <svarsalternativ svar="false">Swedbank</svarsalternativ>
+      <svarsalternativ svar="false">Danske bank</svarsalternativ>
+      <svarsalternativ svar="true">Björn Banck</svarsalternativ>
+    </fraga>
+    <fraga id="13">
+      <text>Vad står förkortningen ISK för?</text>
+      <svarsalternativ svar="false">Idrottens sparkonto</svarsalternativ>
+      <svarsalternativ svar="true">Investeringssparkonto</svarsalternativ>
+      <svarsalternativ svar="false">Internationella spararnas konton</svarsalternativ>
+    </fraga>
+    <fraga id="14">
+      <text>Vad heter den avgift som en kund debiteras vid handel med värdepapper (exempelvis aktier)?</text>
+      <svarsalternativ svar="true">Courtage</svarsalternativ>
+      <svarsalternativ svar="false">Handelstillägg</svarsalternativ>
+      <svarsalternativ svar="false">Amortering</svarsalternativ>
+    </fraga>
+    <fraga id="15">
+      <text>Vad betyder outsourcing?</text>
+      <svarsalternativ svar="false">Att begära företrädesrätt vid försäljning</svarsalternativ>
+      <svarsalternativ svar="true">Att lägga ut delar av sin verksamhet på entreprenad</svarsalternativ>
+      <svarsalternativ svar="false">Att sälja ut kända märken</svarsalternativ>
+    </fraga>
+    <fraga id="16">
+      <text>Vad händer med penningvärdet vid inflation?</text>
+      <svarsalternativ svar="false">Ökar</svarsalternativ>
+      <svarsalternativ svar="false">Ingenting</svarsalternativ>
+      <svarsalternativ svar="true">Minskar</svarsalternativ>
+    </fraga>
   </kategori>
 
   <kategori typ="Etik och regelverk">
-    
-    
-    
-    
+    <fraga id="17">
+      <text>Om en gäldenär inte betalar en fordran är hen skyldig att erlägga dröjsmålsränta. Dröjsmålsräntan beräknas utifrån Riksbankens referensränta plus X många procentenheter. Hur många?</text>
+      <svarsalternativ svar="false">Sex procentenheter</svarsalternativ>
+      <svarsalternativ svar="true">Åtta procentenheter</svarsalternativ>
+      <svarsalternativ svar="false">Tio procentenheter</svarsalternativ>
+    </fraga>
+    <fraga id="18">
+      <text>Vilken lag faller dröjsmålsräntan inom?</text>
+      <svarsalternativ svar="false">Riksbankslagen</svarsalternativ>
+      <svarsalternativ svar="false">Skuldebrevslagen</svarsalternativ>
+      <svarsalternativ svar="true">Räntelagen</svarsalternativ>
+    </fraga>
+    <fraga id="19">
+      <text>När började det nya amorteringskravet för köp av bostad att gälla?</text>
+      <svarsalternativ svar="true">1 juni 2016</svarsalternativ>
+      <svarsalternativ svar="false">1 juli 2016</svarsalternativ>
+      <svarsalternativ svar="false">1 augusti 2016</svarsalternativ>
+    </fraga>
+    <fraga id="20">
+      <text>Vem har rätt att delta på en årsstämma?</text>
+      <svarsalternativ svar="false">Vem som helst</svarsalternativ>
+      <svarsalternativ svar="true">Den som äger minst en aktie i bolaget</svarsalternativ>
+      <svarsalternativ svar="false">Den som sitter i bolagets styrelse</svarsalternativ>
+    </fraga>
+    <fraga id="21">
+      <text>Vad betyder ocker?</text>
+      <svarsalternativ svar="false">Att utnyttja insiderinformation</svarsalternativ>
+      <svarsalternativ svar="true">Att göra oskälig vinst</svarsalternativ>
+      <svarsalternativ svar="false">Att missbruka ett förtroende</svarsalternativ>
+    </fraga>
+    <fraga id="22">
+      <text>Vad betyder lösöre?</text>
+      <svarsalternativ svar="false">Mindre vinst</svarsalternativ>
+      <svarsalternativ svar="false">Efterskänkta skulder</svarsalternativ>
+      <svarsalternativ svar="true">Flyttbar egendom</svarsalternativ>
+    </fraga>
+    <fraga id="23">
+      <text>Vad kallas kortbedrägeri med ett annat ord?</text>
+      <svarsalternativ svar="true">Skimning</svarsalternativ>
+      <svarsalternativ svar="false">Skuggning</svarsalternativ>
+      <svarsalternativ svar="false">Skyfall</svarsalternativ>
+    </fraga>
+    <fraga id="24">
+      <text>Vad är den allmänna momssatsen i Sverige?</text>
+      <svarsalternativ svar="false">20%</svarsalternativ>
+      <svarsalternativ svar="true">25%</svarsalternativ>
+      <svarsalternativ svar="false">30%</svarsalternativ>
+    </fraga>
+    <fraga id="25">
+      <text>Vilken bank har den här logotypen?</text>
+      <bild img="/images/logoutext.png"></bild>
+      <svarsalternativ svar="false">SEB</svarsalternativ>
+      <svarsalternativ svar="false">Skandiabanken</svarsalternativ>
+      <svarsalternativ svar="true">JE Banken</svarsalternativ>
+    </fraga>
   </kategori>
 
 </fragor>

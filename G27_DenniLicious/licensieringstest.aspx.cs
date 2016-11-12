@@ -13,7 +13,7 @@ namespace G27_DenniLicious
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = Server.MapPath("fragor.xml");
+            string path = Server.MapPath("licensiering.xml");
             XmlSwitchCase();
         }
 

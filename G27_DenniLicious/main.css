@@ -25,6 +25,10 @@ h1{
     font-family:sans-serif;
 }
 
+p{
+    font-size: 14px;
+}
+
 /*Menyrad*/
 .menu-wrap {
     background-color:#436477;

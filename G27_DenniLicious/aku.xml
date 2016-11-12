@@ -1,1 +1,111 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--rotelement-->
+<fragor>
+  <!--föräldraelement-->
+  <kategori typ="Produkter och hantering av kundens affärer">
+    <!--barnelement-->
+    <fraga id="1">
+      <!--attribut-->
+      <text>Vilket år grundades Riksbanken? 1668</text>
+      <svarsalternativ svar="true">1668</svarsalternativ>
+      <svarsalternativ svar="false">1768</svarsalternativ>
+      <svarsalternativ svar="false">1868</svarsalternativ>
+    </fraga>
+    <fraga id="2">
+      <text>Är det här den nya 50-kronorssedeln?</text>
+      <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
+      <bild img="/images/zlatan.jpg"></bild>
+      <svarsalternativ svar="false">Ja</svarsalternativ>
+      <svarsalternativ svar="true">Nej</svarsalternativ>
+      <svarsalternativ svar="true">Nej, men det borde vara</svarsalternativ>
+    </fraga>
+    <fraga id="3">
+      <text>Vad väger en 1000-kronorssedel?</text>
+      <svarsalternativ svar="true">1,01 gram</svarsalternativ>
+      <svarsalternativ svar="false">2,02 gram</svarsalternativ>
+      <svarsalternativ svar="false">3,03 gram</svarsalternativ>
+    </fraga>
+    <fraga id="4">
+      <text>Hur mycket motsvarade 5000kr för 100 år sedan?</text>
+      <svarsalternativ svar="false">50 747kr</svarsalternativ>
+      <svarsalternativ svar="true">199 043kr</svarsalternativ>
+      <svarsalternativ svar="false">475 632kr</svarsalternativ>
+    </fraga>
+    <fraga id="5">
+      <text>Vad är de svenska sedlarna tillverkade av? </text>
+      <svarsalternativ svar="true">Råbomull</svarsalternativ>
+      <svarsalternativ svar="false">Silke</svarsalternativ>
+      <svarsalternativ svar="false">Papper</svarsalternativ>
+    </fraga>
+  </kategori>
+
+  <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi">
+    <fraga id="6">
+      <text>Vad kallas det när en valutas värde stiger i förhållande till andra valutors?</text>
+      <svarsalternativ svar="false">Depreciering</svarsalternativ>
+      <svarsalternativ svar="false">Applicering</svarsalternativ>
+      <svarsalternativ svar="true">Appreciering</svarsalternativ>
+    </fraga>
+    <fraga id="7">
+      <text>Vad är prisbasbeloppet (PBB) 2016?</text>
+      <svarsalternativ svar="false">39 600kr</svarsalternativ>
+      <svarsalternativ svar="true">44 300kr</svarsalternativ>
+      <svarsalternativ svar="false">47 200kr</svarsalternativ>
+    </fraga>
+    <fraga id="8">
+      <text>Vilken Bank är det här?</text>
+      <bild img="/images/bjornbanck.jpg"></bild>
+      <svarsalternativ svar="false">Swedbank</svarsalternativ>
+      <svarsalternativ svar="false">Danske bank</svarsalternativ>
+      <svarsalternativ svar="true">Björn Banck</svarsalternativ>
+    </fraga>
+    <fraga id="9">
+      <text>Vad betyder outsourcing?</text>
+      <svarsalternativ svar="false">Att begära företrädesrätt vid försäljning</svarsalternativ>
+      <svarsalternativ svar="true">Att lägga ut delar av sin verksamhet på entreprenad</svarsalternativ>
+      <svarsalternativ svar="false">Att sälja ut kända märken</svarsalternativ>
+    </fraga>
+    <fraga id="10">
+      <text>Vad händer med penningvärdet vid inflation?</text>
+      <svarsalternativ svar="false">Ökar</svarsalternativ>
+      <svarsalternativ svar="false">Ingenting</svarsalternativ>
+      <svarsalternativ svar="true">Minskar</svarsalternativ>
+    </fraga>
+  </kategori>
+
+  <kategori typ="Etik och regelverk">
+    <fraga id="11">
+      <text>Hur mycket krävs i kontantinsats enligt Aktiebolagslagen för att starta aktiebolag?</text>
+      <svarsalternativ svar="true">50 000kr</svarsalternativ>
+      <svarsalternativ svar="false">100 000kr</svarsalternativ>
+      <svarsalternativ svar="false">150 000kr</svarsalternativ>
+    </fraga>
+    <fraga id="12">
+      <text>Vem har rätt att delta på en årsstämma?</text>
+      <svarsalternativ svar="false">Vem som helst</svarsalternativ>
+      <svarsalternativ svar="true">Den som äger minst en aktie i bolaget</svarsalternativ>
+      <svarsalternativ svar="false">Den som sitter i bolagets styrelse</svarsalternativ>
+    </fraga>
+    <fraga id="13">
+      <text>Vad betyder ocker?</text>
+      <svarsalternativ svar="false">Att utnyttja insiderinformation</svarsalternativ>
+      <svarsalternativ svar="true">Att göra oskälig vinst</svarsalternativ>
+      <svarsalternativ svar="false">Att missbruka ett förtroende</svarsalternativ>
+    </fraga>
+    <fraga id="14">
+      <text>Vad kallas kortbedrägeri med ett annat ord?</text>
+      <svarsalternativ svar="true">Skimning</svarsalternativ>
+      <svarsalternativ svar="false">Skuggning</svarsalternativ>
+      <svarsalternativ svar="false">Skyfall</svarsalternativ>
+    </fraga>
+    <fraga id="15">
+      <text>Vilken bank har den här logotypen?</text>
+      <bild img="/images/logoutext.png"></bild>
+      <svarsalternativ svar="false">SEB</svarsalternativ>
+      <svarsalternativ svar="false">Skandiabanken</svarsalternativ>
+      <svarsalternativ svar="true">JE Banken</svarsalternativ>
+    </fraga>
+  </kategori>
+
+</fragor>
