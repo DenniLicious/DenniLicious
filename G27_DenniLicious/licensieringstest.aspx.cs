@@ -22,6 +22,7 @@ namespace G27_DenniLicious
             string fragor = "";
             string alternativ = "";
             string rattSvar = "";
+            string fragebild = "";
             string path = Server.MapPath("fragor.xml");
             XmlTextReader xreader = new XmlTextReader(path);
 
@@ -31,6 +32,7 @@ namespace G27_DenniLicious
                 HtmlGenericControl div1 = new HtmlGenericControl("div");
                 HtmlGenericControl div2 = new HtmlGenericControl("div");
                 CheckBox cb = new CheckBox();
+                Image img = new Image();
                 //CheckBox cb1 = new CheckBox();
                 switch (xreader.Name)
                 {
@@ -41,6 +43,13 @@ namespace G27_DenniLicious
                         div1.InnerText = xreader.ReadString();
                         //fragor += xreader.ReadString();
                         allafragor.Controls.Add(div1);
+                        break;
+
+                    case "bild":
+
+                        fragebild = xreader.GetAttribute("img");
+                        img.ImageUrl = fragebild;
+                        allafragor.Controls.Add(img);
                         break;
 
                     case "svarsalternativ":
@@ -55,6 +64,7 @@ namespace G27_DenniLicious
                         allafragor.Controls.Add(cb);
 
                         break;
+
                 }
                 //allafragor.InnerHtml = fragor; //+ alternativ + rattSvar;
             //alternativen.InnerHtml = alternativ;

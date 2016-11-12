@@ -13,10 +13,12 @@
       <svarsalternativ svar="false">Danmark</svarsalternativ>
     </fraga>
     <fraga id="2">
-      <text>Vad heter de två sidorna i ett T-konto?</text>
-      <svarsalternativ svar="true">Debet</svarsalternativ>
-      <svarsalternativ svar="true">Kredit</svarsalternativ>
-      <svarsalternativ svar="false">Sparkonto</svarsalternativ>
+      <text>Är det här den nya 50-kronorssedeln?</text>     
+      <!--<bild><![CDATA[<img src="/images/zlatan.jpg" />]]></bild>-->
+      <bild img="/images/zlatan.jpg"></bild>
+      <svarsalternativ svar="false">Ja</svarsalternativ>
+      <svarsalternativ svar="true">Nej</svarsalternativ>
+      <svarsalternativ svar="true">Nej, men det borde vara</svarsalternativ>
     </fraga>
   </produkter>
 

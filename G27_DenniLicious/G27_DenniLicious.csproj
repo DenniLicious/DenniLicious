@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="images\logo.png" />
+    <Content Include="images\zlatan.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Licensieringstest.aspx" />
     <Content Include="LoggaUt.aspx" />
