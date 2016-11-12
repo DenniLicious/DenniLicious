@@ -21,6 +21,10 @@
     padding: 20px 0 0 0;
 }
 
+h1{
+    font-family:sans-serif;
+}
+
 /*Menyrad*/
 .menu-wrap {
     background-color:#436477;
@@ -114,5 +118,30 @@
     padding: 15px 0 15px 0;
     font-family: sans-serif;
     color: white;
+}
+
+#ContentPlaceHolder1_allafragor div{
+    padding-top: 25px;
+    font-weight:bold;
+}
+
+#ContentPlaceHolder1_allafragor img{
+    display:block;
+    margin:auto;
+    padding: 3px;
+}
+
+#ContentPlaceHolder1_allafragor div2{
+    padding-top: 25px;
+    font-weight:bold;
+    display:block;
+    font-family:sans-serif;
+    font-size:24px;
+    color: #436477;
+}
+
+#ContentPlaceHolder1_allafragor divHjalp{
+    font-style:italic;
+    display:block;
 }
 

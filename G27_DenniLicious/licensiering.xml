@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--rotelement-->
+<fragor>
+  <!--föräldraelement-->
+  <kategori typ="Produkter och hantering av kundens affärer">
+    <!--barnelement-->
+    <fraga id="1">
+      <!--attribut-->
+      <text>Vilket land kommer det mobila betalningsföretaget iZettle ifrån?</text>
+      <svarsalternativ svar="false">Norge</svarsalternativ>
+      <svarsalternativ svar="true">Sverige</svarsalternativ>
+      <svarsalternativ svar="false">Danmark</svarsalternativ>
+    </fraga>
+    <fraga id="2">
+      <text>Är det här den nya 50-kronorssedeln?</text>     
+      <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
+      <bild img="/images/zlatan.jpg"></bild>
+      <svarsalternativ svar="false">Ja</svarsalternativ>
+      <svarsalternativ svar="true">Nej</svarsalternativ>
+      <svarsalternativ svar="true">Nej, men det borde vara</svarsalternativ>
+    </fraga>
+    <fraga id="3">
+      <text>Vad väger en 1000-kronorssedel?</text>
+      <svarsalternativ svar="true">1,01 gram</svarsalternativ>
+      <svarsalternativ svar="false">2,02 gram</svarsalternativ>
+      <svarsalternativ svar="false">3,03 gram</svarsalternativ>
+    </fraga>
+    <fraga id="4">
+      <text>Hur mycket motsvarade 5000kr för 100 år sedan?</text>
+      <svarsalternativ svar="false">50 747kr</svarsalternativ>
+      <svarsalternativ svar="true">199 043kr</svarsalternativ>
+      <svarsalternativ svar="false">475 632kr</svarsalternativ>
+    </fraga>
+    <fraga id="5">
+      <text>Vad är de svenska sedlarna tillverkade av? </text>
+      <svarsalternativ svar="true">Råbomull</svarsalternativ>
+      <svarsalternativ svar="false">Silke</svarsalternativ>
+      <svarsalternativ svar="false">Papper</svarsalternativ>
+    </fraga>
+    <fraga id="6">
+      <text>Vad heter Sveriges finansminister?</text>
+      <svarsalternativ svar="false">Magdalena Svensson</svarsalternativ>
+      <svarsalternativ svar="false">Margaretha Svensson</svarsalternativ>
+      <svarsalternativ svar="true">Magdalena Andersson</svarsalternativ>
+    </fraga>
+    <fraga id="7">
+      <text>Vad är räntan på CSN-lån i Sverige under 2016?</text>
+      <svarsalternativ svar="false">0,3%</svarsalternativ>
+      <svarsalternativ svar="true">0,6%</svarsalternativ>
+      <svarsalternativ svar="false">0,9%</svarsalternativ>
+    </fraga>
+    <fraga id="8">
+      <text>Det har kommit nya 100- och 500-kronorssedlar, när måste du byta in dina gamla?</text>
+      <svarsalternativ svar="false">31 december 2016</svarsalternativ>
+      <svarsalternativ svar="true">30 juni 2017</svarsalternativ>
+      <svarsalternativ svar="false">31 december 2017</svarsalternativ>
+    </fraga>
+  </kategori>
+
+  <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi">
+    <fraga id="9">
+      <text>Vad kallas nationalekonomins två huvudavdelningar?</text>
+      <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
+      <svarsalternativ svar="true">Makroekonomi</svarsalternativ>
+      <svarsalternativ svar="false">Mekroekonomi</svarsalternativ>
+      <svarsalternativ svar="true">Mikroekonomi</svarsalternativ>
+    </fraga>
+    
+    
+  </kategori>
+
+  <kategori typ="Etik och regelverk">
+    
+    
+    
+    
+  </kategori>
+
+</fragor>

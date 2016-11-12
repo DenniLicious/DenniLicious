@@ -19,58 +19,57 @@ namespace G27_DenniLicious
 
         public void XmlSwitchCase()
         {
-            string fragor = "";
             string alternativ = "";
             string rattSvar = "";
             string fragebild = "";
-            string path = Server.MapPath("fragor.xml");
+            string path = Server.MapPath("licensiering.xml");
             XmlTextReader xreader = new XmlTextReader(path);
 
             //läser igenom Xml-filen
             while (xreader.Read())
             {
                 HtmlGenericControl div1 = new HtmlGenericControl("div");
-                HtmlGenericControl div2 = new HtmlGenericControl("div");
+                HtmlGenericControl div2 = new HtmlGenericControl("div2");
+                HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
                 CheckBox cb = new CheckBox();
                 Image img = new Image();
-                //CheckBox cb1 = new CheckBox();
                 switch (xreader.Name)
                 {
+                    //visas som en rubrik när ny kategori börjar
+                    case "kategori":
+                        div2.InnerText = xreader.GetAttribute("typ");
+                        allafragor.Controls.Add(div2);
+                        break;
+
+                    //frågan
                     case "text":
-                        
-                        //fragan.InnerHtml = xreader.ReadString();
-                        //fragan.Controls.Add(fragan);
                         div1.InnerText = xreader.ReadString();
                         //fragor += xreader.ReadString();
                         allafragor.Controls.Add(div1);
                         break;
 
-                    case "bild":
+                    //hjälptext visas om det finns inlagt i XML-elementet fråga
+                    case "hjalp":
+                        divHjalp.InnerText = xreader.ReadString();
+                        allafragor.Controls.Add(divHjalp);
+                        break;
 
+                    case "bild":
                         fragebild = xreader.GetAttribute("img");
                         img.ImageUrl = fragebild;
                         div1.InnerText = "";
                         allafragor.Controls.Add(img);
-                        allafragor.Controls.Add(div1);
                         break;
 
                     case "svarsalternativ":
                         //Visar facit
                         rattSvar = xreader.GetAttribute("svar");
-                        //div2.InnerText = rattSvar;
-                        //allafragor.Controls.Add(div2);
-                        //Måste ligga under rattSvar, annars funkar inte rattSvar.
-                       
+                        //Måste ligga under rattSvar, annars funkar inte rattSvar.                    
                         alternativ = xreader.ReadString();
                         cb.Text = alternativ;
                         allafragor.Controls.Add(cb);
-
                         break;
-
                 }
-                //allafragor.InnerHtml = fragor; //+ alternativ + rattSvar;
-            //alternativen.InnerHtml = alternativ;
-            //rattasvaret.InnerHtml = rattSvar;
             }
 
             
