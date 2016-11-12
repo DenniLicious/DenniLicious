@@ -14,6 +14,7 @@
             <h3>Bla bla bla.</h3>
 
     <div id="allafragor" runat="server"></div>
-    <div id="alternativen" runat="server"></div>
-    <div id="rattasvaret" runat="server"></div>
+    <%--<div id="alternativen" runat="server"></div>
+    <div id="rattasvaret" runat="server"></div>--%>
+    <asp:Button ID="btnSkickaLic" runat="server" Text="Skicka in och rätta licensieringstest" OnClick="btnSkickaLic_Click" />
 </asp:Content>

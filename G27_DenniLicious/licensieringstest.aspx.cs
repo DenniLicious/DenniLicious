@@ -11,10 +11,20 @@ namespace G27_DenniLicious
 {
     public partial class Licensieringstest : System.Web.UI.Page
     {
+        textCb cb = new textCb();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = Server.MapPath("fragor.xml");
+            string path = Server.MapPath("licensiering.xml");
             XmlSwitchCase();
+        }
+        public class textCb : System.Web.UI.HtmlControls.HtmlInputCheckBox
+        {
+            public string text { get; set; }
+            public override void RenderControl(HtmlTextWriter writer)
+            {
+                base.RenderControl(writer);
+                writer.Write(this.text);
+            }
         }
 
         public void XmlSwitchCase()
@@ -24,14 +34,18 @@ namespace G27_DenniLicious
             string fragebild = "";
             string path = Server.MapPath("licensiering.xml");
             XmlTextReader xreader = new XmlTextReader(path);
-
+            int i = 1;
             //läser igenom Xml-filen
             while (xreader.Read())
             {
+                
                 HtmlGenericControl div1 = new HtmlGenericControl("div");
                 HtmlGenericControl div2 = new HtmlGenericControl("div2");
                 HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
-                CheckBox cb = new CheckBox();
+                HiddenField hd = new HiddenField();
+                //CheckBox cb = new CheckBox();
+                //textCb cb = new textCb();
+                cb = new textCb();
                 Image img = new Image();
                 switch (xreader.Name)
                 {
@@ -64,15 +78,28 @@ namespace G27_DenniLicious
                     case "svarsalternativ":
                         //Visar facit
                         rattSvar = xreader.GetAttribute("svar");
+                        
                         //Måste ligga under rattSvar, annars funkar inte rattSvar.                    
                         alternativ = xreader.ReadString();
-                        cb.Text = alternativ;
+                        //För att ge unik ID-nummer.
+                        cb.ID = i.ToString();
+                        i++;
+                        //Tilldelar true eller false som dolt värde till cb.
+                        cb.Value = rattSvar;
+                        //Lägger till text bredvid cb.
+                        cb.text = alternativ;
                         allafragor.Controls.Add(cb);
                         break;
                 }
             }
 
             
+        }
+
+        protected void btnSkickaLic_Click(object sender, EventArgs e)
+        {
+            
+          
         }
     }
 }
