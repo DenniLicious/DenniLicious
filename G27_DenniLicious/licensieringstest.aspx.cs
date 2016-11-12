@@ -49,7 +49,9 @@ namespace G27_DenniLicious
 
                         fragebild = xreader.GetAttribute("img");
                         img.ImageUrl = fragebild;
+                        div1.InnerText = "";
                         allafragor.Controls.Add(img);
+                        allafragor.Controls.Add(div1);
                         break;
 
                     case "svarsalternativ":
