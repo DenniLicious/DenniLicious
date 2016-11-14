@@ -21,6 +21,6 @@
                 4. Visa om personen är godkänd eller underkänd vid senaste provtillfället 
 
             </p>
-
+<asp:Table ID="adminTabell" runat="server"></asp:Table>
 
 </asp:Content>

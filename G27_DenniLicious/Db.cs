@@ -82,11 +82,39 @@ namespace G27_DenniLicious
                     Typ
                 };
             }
-                
-
                 return vald;
             
         }
+
+        public List<Provresultat>Del1()
+        {
+            string sql = "select * from anvandare where typ='Nyanställd'";
+            dr = sqlFråga(sql);
+
+            Provresultat pr;
+            List<Provresultat> prLista = new List<Provresultat>();
+
+            while(dr.Read())
+            {
+                pr = new Provresultat()
+                {
+                    namn = dr["namn"].ToString(),
+                    test_typ = dr["test_typ"].ToString(),
+                    godkand = (bool)dr["godkand"],
+                    resultat_totalt = dr["resultat_totalt"].ToString(),
+                    resultat_produkter = dr["resultat_produkter"].ToString(),
+                    resultat_ekonomi = dr["resultat_ekonomi"].ToString(),
+                    resultat_etik = dr["resultat_etik"].ToString(),
+                    datum = (DateTime)dr["datum"],
+                    typ = dr["typ"].ToString(),
+                    aku = (bool)dr["aku"],
+                };
+
+                prLista.Add(pr);
+            }
+            return prLista;
+        }
+
 
 
         //public void ValdAnvandare(int userid)
