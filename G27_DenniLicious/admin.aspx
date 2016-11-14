@@ -20,14 +20,17 @@
         <%--Lägger radiobuttons i en group för att få true/false-värde på rb vid tryck--%>
         <asp:RadioButton ID="rbLicensieringstest" runat="server" text="Licensieringstest" GroupName="tester" />
         <asp:RadioButton ID="rbAkutest" runat="server" text="Årlig kunskapsuppdatering" GroupName="tester" /> 
-
+    <br />
     <br />
     <asp:Button ID="btnSkaSkrivaTest" runat="server" Text="Visa personer" OnClick="btnSkaSkrivaTest_Click"/>
     <br />
+    <br />
     <asp:ListBox ID="lbPersonerSomSkaSkrivaTest" runat="server" style="width:125px; height: 100px;"></asp:ListBox>
     <br />
+
     <h3>Välj person som du vill se provresultat-statistik för:</h3>
     <asp:DropDownList ID="ddProvdeltagare" runat="server" OnSelectedIndexChanged="ddProvdeltagare_SelectedIndexChanged"></asp:DropDownList>
-<asp:Table ID="adminTabell" runat="server"></asp:Table>
+
+    <asp:Table ID="adminTabell" runat="server"></asp:Table>
 
 </asp:Content>
