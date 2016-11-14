@@ -86,33 +86,84 @@ namespace G27_DenniLicious
             
         }
 
+        public List<Anvandare> Provdeltagarna()
+        {
+            string sql = "select * from anvandare where typ='Anställd' or typ='Nyanställd'";
+            dr = sqlFråga(sql);
+
+            Anvandare pd;
+            List<Anvandare> pdLista = new List<Anvandare>();
+
+            while (dr.Read())
+            {
+                pd = new Anvandare()
+                {
+                    Namn = dr["namn"].ToString()
+                };
+
+                pdLista.Add(pd);
+            }
+            return pdLista;
+
+        }
+
+
+
+
+
+
+
+        //Metod som returnerar en lista med de personer som ska skriva licensieringstestet (val 1)
         public List<Provresultat>Del1()
         {
             string sql = "select * from anvandare where typ='Nyanställd'";
             dr = sqlFråga(sql);
 
-            Provresultat pr;
+            Provresultat prl;
             List<Provresultat> prLista = new List<Provresultat>();
 
             while(dr.Read())
             {
-                pr = new Provresultat()
+                prl = new Provresultat()
                 {
-                    namn = dr["namn"].ToString(),
-                    test_typ = dr["test_typ"].ToString(),
-                    godkand = (bool)dr["godkand"],
-                    resultat_totalt = dr["resultat_totalt"].ToString(),
-                    resultat_produkter = dr["resultat_produkter"].ToString(),
-                    resultat_ekonomi = dr["resultat_ekonomi"].ToString(),
-                    resultat_etik = dr["resultat_etik"].ToString(),
-                    datum = (DateTime)dr["datum"],
-                    typ = dr["typ"].ToString(),
-                    aku = (bool)dr["aku"],
+                    namn = dr["namn"].ToString()
                 };
 
-                prLista.Add(pr);
+                prLista.Add(prl);
             }
             return prLista;
+        }
+
+        //Metod som returnerar en lista med de personer som ska göra åku-test (val 2)
+        public List<Provresultat>Del2()
+        {
+            string sql = "select * from anvandare where aku='false' and typ='Anställd'";
+            dr = sqlFråga(sql);
+
+            Provresultat praku;
+            List<Provresultat> prAkuLista = new List<Provresultat>();
+
+            while(dr.Read())
+            {
+                praku = new Provresultat()
+                {
+                    namn = dr["namn"].ToString()
+
+                    //namn = dr["namn"].ToString(),
+                    //test_typ = dr["test_typ"].ToString(),
+                    //godkand = (bool)dr["godkand"],
+                    //resultat_totalt = dr["resultat_totalt"].ToString(),
+                    //resultat_produkter = dr["resultat_produkter"].ToString(),
+                    //resultat_ekonomi = dr["resultat_ekonomi"].ToString(),
+                    //resultat_etik = dr["resultat_etik"].ToString(),
+                    //datum = (DateTime)dr["datum"],
+                    //typ = dr["typ"].ToString(),
+                    //aku = (bool)dr["aku"]
+                };
+
+                prAkuLista.Add(praku);
+            }
+            return prAkuLista;
         }
 
 

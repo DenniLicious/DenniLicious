@@ -19,5 +19,10 @@ namespace G27_DenniLicious
         public string namn { get; set; }
         public string typ { get; set; }
         public bool aku { get; set; }
+
+        public override string ToString()
+        {
+            return namn;
+        }
     }
 }

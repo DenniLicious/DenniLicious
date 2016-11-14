@@ -13,6 +13,51 @@ namespace G27_DenniLicious {
     public partial class Admin {
         
         /// <summary>
+        /// rbLicensieringstest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbLicensieringstest;
+        
+        /// <summary>
+        /// rbAkutest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbAkutest;
+        
+        /// <summary>
+        /// btnSkaSkrivaTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSkaSkrivaTest;
+        
+        /// <summary>
+        /// lbPersonerSomSkaSkrivaTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lbPersonerSomSkaSkrivaTest;
+        
+        /// <summary>
+        /// ddProvdeltagare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddProvdeltagare;
+        
+        /// <summary>
         /// adminTabell control.
         /// </summary>
         /// <remarks>
