@@ -16,13 +16,13 @@ namespace G27_DenniLicious
         public string resultat_ekonomi { get; set; }
         public string resultat_etik { get; set; }
         //public int id { get; set; }
-        public string namn { get; set; }
-        public string typ { get; set; }
-        public bool aku { get; set; }
+        //public string namn { get; set; }
+        //public string typ { get; set; }
+        //public bool aku { get; set; }
 
-        public override string ToString()
-        {
-            return namn;
-        }
+        //public override string ToString()
+        //{
+        //    return namn;
+        //}
     }
 }

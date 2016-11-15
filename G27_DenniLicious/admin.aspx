@@ -30,7 +30,33 @@
 
     <h3>Välj person som du vill se provresultat-statistik för:</h3>
     <asp:DropDownList ID="ddProvdeltagare" runat="server" OnSelectedIndexChanged="ddProvdeltagare_SelectedIndexChanged"></asp:DropDownList>
+    <br />
+    <br />
+    <asp:Button ID="btnResultat" runat="server" Text="Visa statistik" OnClick="btnResultat_Click"/>
+    <br />
+    <br />
+    <asp:Table ID="adminTabell" runat="server" Style="width:80%; margin:auto; border:1px solid;">
+        <asp:TableHeaderRow ID="tabellhuvud">
+            <%--<asp:TableHeaderCell>Namn</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Anställningsform</asp:TableHeaderCell>--%>
+            <asp:TableHeaderCell>Test</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Test-datum</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Produkt-del</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Ekonomi-del</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Etik-del</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Totalt</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Resultat</asp:TableHeaderCell>
+        </asp:TableHeaderRow>
+        <asp:TableRow>
+            <asp:TableCell ID ="test"></asp:TableCell>
+            <asp:TableCell ID ="datum"></asp:TableCell>
+            <asp:TableCell ID ="produkt"></asp:TableCell>
+            <asp:TableCell ID ="ekonomi"></asp:TableCell>
+            <asp:TableCell ID ="etik"></asp:TableCell>
+            <asp:TableCell ID ="totalt"></asp:TableCell>
+            <asp:TableCell ID ="resultat"></asp:TableCell>
+        </asp:TableRow>
+    </asp:Table>
 
-    <asp:Table ID="adminTabell" runat="server"></asp:Table>
 
 </asp:Content>

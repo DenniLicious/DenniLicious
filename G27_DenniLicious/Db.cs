@@ -98,7 +98,8 @@ namespace G27_DenniLicious
             {
                 pd = new Anvandare()
                 {
-                    Namn = dr["namn"].ToString()
+                    Namn = dr["namn"].ToString(),
+                    Id = (int)dr["id"]
                 };
 
                 pdLista.Add(pd);
@@ -114,19 +115,19 @@ namespace G27_DenniLicious
 
 
         //Metod som returnerar en lista med de personer som ska skriva licensieringstestet (val 1)
-        public List<Provresultat>Del1()
+        public List<Anvandare>Del1()
         {
             string sql = "select * from anvandare where typ='Nyanställd'";
             dr = sqlFråga(sql);
 
-            Provresultat prl;
-            List<Provresultat> prLista = new List<Provresultat>();
+            Anvandare prl;
+            List<Anvandare> prLista = new List<Anvandare>();
 
             while(dr.Read())
             {
-                prl = new Provresultat()
+                prl = new Anvandare()
                 {
-                    namn = dr["namn"].ToString()
+                    Namn = dr["namn"].ToString()
                 };
 
                 prLista.Add(prl);
@@ -135,30 +136,19 @@ namespace G27_DenniLicious
         }
 
         //Metod som returnerar en lista med de personer som ska göra åku-test (val 2)
-        public List<Provresultat>Del2()
+        public List<Anvandare>Del2()
         {
             string sql = "select * from anvandare where aku='false' and typ='Anställd'";
             dr = sqlFråga(sql);
 
-            Provresultat praku;
-            List<Provresultat> prAkuLista = new List<Provresultat>();
+            Anvandare praku;
+            List<Anvandare> prAkuLista = new List<Anvandare>();
 
             while(dr.Read())
             {
-                praku = new Provresultat()
+                praku = new Anvandare()
                 {
-                    namn = dr["namn"].ToString()
-
-                    //namn = dr["namn"].ToString(),
-                    //test_typ = dr["test_typ"].ToString(),
-                    //godkand = (bool)dr["godkand"],
-                    //resultat_totalt = dr["resultat_totalt"].ToString(),
-                    //resultat_produkter = dr["resultat_produkter"].ToString(),
-                    //resultat_ekonomi = dr["resultat_ekonomi"].ToString(),
-                    //resultat_etik = dr["resultat_etik"].ToString(),
-                    //datum = (DateTime)dr["datum"],
-                    //typ = dr["typ"].ToString(),
-                    //aku = (bool)dr["aku"]
+                    Namn = dr["namn"].ToString()
                 };
 
                 prAkuLista.Add(praku);
@@ -166,34 +156,35 @@ namespace G27_DenniLicious
             return prAkuLista;
         }
 
+        public List<Provresultat> hämtaResultat(int valdPerson)
+    {
+        string sql = "select * from test t"
+            + " where t.anvandare_id = '" + valdPerson + "'"
+            + " order by datum desc"
+            + " limit 1";
+        dr = sqlFråga(sql);
 
+        Provresultat resultatet;
+        List<Provresultat> resultatlista = new List<Provresultat>();
 
-        //public void ValdAnvandare(int userid)
-        //{
-        //    string sql = "select * from anvandare a where a.id = '" + userid + "'";
-        //    dr = sqlFråga(sql);
+        while (dr.Read())
+        {
+            resultatet = new Provresultat()
+            {
+                test_typ = dr["test_typ"].ToString(),
+                godkand = (bool)dr["godkand"],
+                resultat_totalt = dr["resultat_totalt"].ToString(),
+                datum = (DateTime)dr["datum"],
+                resultat_produkter = dr["resultat_produkter"].ToString(),
+                resultat_ekonomi = dr["resultat_ekonomi"].ToString(),
+                resultat_etik = dr["resultat_etik"].ToString()
+                
+            };
 
-        //    Anvandare vald;
+            resultatlista.Add(resultatet);
+        }
+        return resultatlista;
+    }
 
-        //    while (dr.Read())
-        //    {
-        //        vald = new Anvandare()
-        //        {
-        //            Id = (int)dr["id"],
-        //            Namn = dr["namn"].ToString(),
-        //            Typ = dr["typ"].ToString()
-        //        };
-
-
-        //    }
-        //}
-        //metod för att testa att kopplingen till databasen funkar - lägger till medlem, YES
-        //public void testar()
-        //{
-        //string sql = "insert into anvandare(namn, typ) Values ('Dennis', 'Admin')";
-        //cmd = new NpgsqlCommand(sql,conn);
-
-        //cmd.ExecuteNonQuery();
-        //}
     }
 }

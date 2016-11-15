@@ -150,3 +150,6 @@ p{
     display:block;
 }
 
+#ContentPlaceHolder1_adminTabell th, td{
+    border: 1px solid;
+}

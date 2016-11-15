@@ -42,6 +42,50 @@ namespace G27_DenniLicious
 
         }
 
+        protected void btnResultat_Click(object sender, EventArgs e)
+        {
+            int vald = int.Parse(ddProvdeltagare.SelectedValue);
+            List<Provresultat> pr = new List<Provresultat>();
+            pr = Databas.hämtaResultat(vald);
+
+            test.Text = "";
+            datum.Text = "";
+            produkt.Text = "";
+            ekonomi.Text = "";
+            etik.Text = "";
+            totalt.Text = "";
+            resultat.Text = "";
+
+                foreach (Provresultat prov in pr)
+                {
+                    if (prov.test_typ == "aku2016")
+                    {
+                        test.Text = "Årligt Kunskapstest";
+                    }
+                    else if (prov.test_typ == "lictest")
+                    {
+                        test.Text = "Licensieringstest";
+                    }
+
+                    datum.Text = prov.datum.ToShortDateString();
+                    produkt.Text = prov.resultat_produkter;
+                    ekonomi.Text = prov.resultat_ekonomi;
+                    etik.Text = prov.resultat_etik;
+                    totalt.Text = prov.resultat_totalt;
+
+                    if (prov.godkand == true)
+                    {
+                        resultat.Text = "Godkänd";
+                    }
+                    else if (prov.godkand == false)
+                    {
+                        resultat.Text = "Underkänd";
+                    }
+                }
+            
+            
+        }
+
 
     }
 }
