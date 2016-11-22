@@ -69,10 +69,16 @@ namespace G27_DenniLicious
                         cb.Text = alternativ;
                         allafragor.Controls.Add(cb);
                         break;
+
                 }
             }
 
             
+        }
+
+        protected void btnSkickaLic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
