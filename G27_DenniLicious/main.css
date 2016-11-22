@@ -134,6 +134,7 @@ p{
     display:block;
     margin:auto;
     padding: 3px;
+    max-width:75%;
 }
 
 #ContentPlaceHolder1_allafragor div2{

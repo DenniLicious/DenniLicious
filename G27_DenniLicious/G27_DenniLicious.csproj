@@ -81,6 +81,7 @@
     <Content Include="main.css" />
     <Content Include="npsql\Mono.Security.dll" />
     <Content Include="npsql\Npgsql.dll" />
+    <Content Include="responsive.css" />
     <Content Include="StartaTest.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
