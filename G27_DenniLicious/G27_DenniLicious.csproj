@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Anvandare.cs" />
     <Compile Include="Db.cs" />
+    <Compile Include="Fragor.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -24,6 +24,7 @@ namespace G27_DenniLicious
             string fragebild = "";
             string path = Server.MapPath("licensiering.xml");
             XmlTextReader xreader = new XmlTextReader(path);
+            XmlNode x; 
 
             //läser igenom Xml-filen
             while (xreader.Read())
@@ -33,6 +34,8 @@ namespace G27_DenniLicious
                 HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
                 CheckBox cb = new CheckBox();
                 Image img = new Image();
+                Fragor Q = new Fragor();
+              
                 switch (xreader.Name)
                 {
                     //visas som en rubrik när ny kategori börjar
@@ -43,13 +46,16 @@ namespace G27_DenniLicious
 
                     //frågan
                     case "text":
+                        Q.frageText = xreader.ReadString();
                         div1.InnerText = xreader.ReadString();
+                        
                         //fragor += xreader.ReadString();
                         allafragor.Controls.Add(div1);
                         break;
 
                     //hjälptext visas om det finns inlagt i XML-elementet fråga
                     case "hjalp":
+                        Q.hjalpText = xreader.ReadString();
                         divHjalp.InnerText = xreader.ReadString();
                         allafragor.Controls.Add(divHjalp);
                         break;
