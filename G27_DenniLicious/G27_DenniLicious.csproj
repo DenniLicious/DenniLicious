@@ -140,6 +140,7 @@
     <Compile Include="StartaTest.aspx.designer.cs">
       <DependentUpon>StartaTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Svar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

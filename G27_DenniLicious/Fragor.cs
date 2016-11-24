@@ -7,11 +7,17 @@ namespace G27_DenniLicious
 {
     public class Fragor
     {
+        public List<Svar> svaren { get; set; }
+        public Fragor()
+        {
+            svaren = new List<Svar>();
+        }
         public string frageText { get; set; }
         public string hjalpText { get; set; }
         public string kategori {get; set;}
         public int frageId {get; set;}
         public string bild { get; set; }
+        
 
         public string alt1 {get; set;}
         public string alt2 {get; set;}
