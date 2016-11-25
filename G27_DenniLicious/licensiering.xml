@@ -11,22 +11,22 @@
       <text>Vilket land kommer det mobila betalningsföretaget iZettle ifrån?</text>
       <hjalp></hjalp>
       <bild></bild>
-      <svar>
-        <svarsalternativ svar="false">Norge</svarsalternativ>
-        <svarsalternativ svar="true">Sverige</svarsalternativ>
-        <svarsalternativ svar="false">Danmark</svarsalternativ>
-      </svar>
+      
+        <svarsalternativ1 svar="false">Norge</svarsalternativ1>
+        <svarsalternativ2 svar="true">Sverige</svarsalternativ2>
+        <svarsalternativ3 svar="false">Danmark</svarsalternativ3>
+      
     </fraga>
     <fraga id="2">
       <kategori>Produkter och hantering av kundens affärer</kategori>
       <text>Är det här den nya 50-kronorssedeln?</text>
       <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
-      <bild img="/images/zlatan.jpg"></bild>
-      <svar>
-        <svarsalternativ svar="false">Ja</svarsalternativ>
-        <svarsalternativ svar="true">Nej</svarsalternativ>
-        <svarsalternativ svar="true">Nej, men det borde vara</svarsalternativ>
-      </svar>
+      <bild>/images/zlatan.jpg</bild>
+      
+        <svarsalternativ1 svar="false">Ja</svarsalternativ1>
+        <svarsalternativ2 svar="true">Nej</svarsalternativ2>
+        <svarsalternativ3 svar="true">Nej, men det borde vara</svarsalternativ3>
+      
     </fraga>
   </kategori>
     <!--<fraga id="3">

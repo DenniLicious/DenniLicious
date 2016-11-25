@@ -30,21 +30,34 @@ namespace G27_DenniLicious
             {
                 HtmlGenericControl div = new HtmlGenericControl("div");
                 HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
-                
-                CheckBox cbb = new CheckBox();
+                Image img = new Image();
+                CheckBox cb = new CheckBox();
+                    CheckBox cbb = new CheckBox();
+                    CheckBox cbbb = new CheckBox();
+                //CheckBox cbb = new CheckBox();
                 //HtmlGenericControl svarA = new HtmlGenericControl("svarA");
                 //HtmlGenericControl svarB = new HtmlGenericControl("svarB");
 
                 divHjalp.InnerText = Q.hjalpText;
                 div.InnerText = Q.frageText;
+                img.ImageUrl = Q.bild;
                 allafragor.Controls.Add(div);
                 allafragor.Controls.Add(divHjalp);
+                allafragor.Controls.Add(img);
+
                 
+                //                div1.InnerText = "";
+                //                allafragor.Controls.Add(img);
+
                 foreach (Svar s in Q.svaren)
                 {
-                    CheckBox cb = new CheckBox();
-                    cb.Text = s.svar;                    
+                    
+                    cb.Text = s.svar1;
+                    cbb.Text = s.svar2;
+                    cbbb.Text = s.svar3; 
                     allafragor.Controls.Add(cb);
+                    allafragor.Controls.Add(cbb);
+                    allafragor.Controls.Add(cbbb);
                 }
 
                 
@@ -73,7 +86,7 @@ namespace G27_DenniLicious
             doc.Load(path);
 
             XmlNodeList allaFragor = doc.SelectNodes("/fragor/kategori/fraga");
-            XmlNodeList allaSvar = doc.SelectNodes("/fragor/kategori/fraga/svar");
+            //XmlNodeList allaSvar = doc.SelectNodes("/fragor/kategori/fraga/svar");
 
             foreach (XmlNode node in allaFragor)
             {
@@ -84,15 +97,34 @@ namespace G27_DenniLicious
                 Q.hjalpText = node["hjalp"].InnerText;
                 Q.bild = node["bild"].InnerText;
                 
-             foreach(XmlNode svar in allaSvar)
-            {
-                
                 Svar S = new Svar();
-                S.svar = svar["svarsalternativ"].InnerText;
-                S.ratt = svar["svarsalternativ"].Attributes["svar"].Value;
-                S.id = svar.ParentNode.Attributes["id"].Value;
+
+                S.svar1 = node["svarsalternativ1"].InnerText;
+                S.ratt1 = node["svarsalternativ1"].Attributes["svar"].Value;
+
+                S.svar2 = node["svarsalternativ2"].InnerText;
+                S.ratt2 = node["svarsalternativ2"].Attributes["svar"].Value;
+
+                S.svar3 = node["svarsalternativ3"].InnerText;
+                S.ratt3 = node["svarsalternativ3"].Attributes["svar"].Value;
                 Q.svaren.Add(S);
-            }
+            
+            // foreach(XmlNode svar in allaSvar)
+            //{
+                
+            //    Svar S = new Svar();
+            //    S.svar1 = svar["svarsalternativ1"].InnerText;
+            //    S.ratt1 = svar["svarsalternativ1"].Attributes["svar"].Value;
+
+            //    S.svar2 = svar["svarsalternativ2"].InnerText;
+            //    S.ratt2 = svar["svarsalternativ2"].Attributes["svar"].Value;
+
+            //    S.svar3 = svar["svarsalternativ3"].InnerText;
+            //    S.ratt3 = svar["svarsalternativ3"].Attributes["svar"].Value;
+
+            //    S.id = svar.ParentNode.Attributes["id"].Value;
+            //    Q.svaren.Add(S);
+            //}
             Test.Add(Q);
              
             }
