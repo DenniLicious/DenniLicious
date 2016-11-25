@@ -11,32 +11,63 @@ namespace G27_DenniLicious
 {
     public partial class Licensieringstest : System.Web.UI.Page
     {
+            HtmlGenericControl div = new HtmlGenericControl("div");
+            HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
+            Image img = new Image();
+            textCb cb = new textCb();
+            textCb cbb = new textCb();
+            textCb cbbb = new textCb();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             HämtaFrågor(XMLToList());
             
             //string path = Server.MapPath("licensiering.xml");
             //XmlSwitchCase();
         }
 
+        public class textCb: System.Web.UI.HtmlControls.HtmlInputCheckBox
+        {
+            public string text { get; set; }
+            public override void RenderControl(HtmlTextWriter writer)
+            {
+                base.RenderControl(writer);
+                writer.Write(this.text);
+            }
+        }
+
         protected void btnSkickaLic_Click(object sender, EventArgs e)
         {
-        
+            Fragor Q = new Fragor();
+
+            foreach (Svar s in Q.svaren)
+            {
+                
+            }
         }
 
         public void HämtaFrågor(List<Fragor> allaFragor) //Metod 2
         {
             foreach (Fragor Q in allaFragor)
             {
-                HtmlGenericControl div = new HtmlGenericControl("div");
-                HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
-                Image img = new Image();
-                CheckBox cb = new CheckBox();
-                    CheckBox cbb = new CheckBox();
-                    CheckBox cbbb = new CheckBox();
+                //HtmlGenericControl div = new HtmlGenericControl("div");
+                //HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
+                //Image img = new Image();
+                //CheckBox cb = new CheckBox();
+                //    CheckBox cbb = new CheckBox();
+                //    CheckBox cbbb = new CheckBox();
                 //CheckBox cbb = new CheckBox();
                 //HtmlGenericControl svarA = new HtmlGenericControl("svarA");
                 //HtmlGenericControl svarB = new HtmlGenericControl("svarB");
+
+                div = new HtmlGenericControl("div");
+                divHjalp = new HtmlGenericControl("divHjalp");
+                img = new Image();
+                
+                 
+                cb = new textCb();
+                cbb = new textCb();
+                cbbb = new textCb();
 
                 divHjalp.InnerText = Q.hjalpText;
                 div.InnerText = Q.frageText;
@@ -52,9 +83,22 @@ namespace G27_DenniLicious
                 foreach (Svar s in Q.svaren)
                 {
                     
-                    cb.Text = s.svar1;
-                    cbb.Text = s.svar2;
-                    cbbb.Text = s.svar3; 
+                    string cbIdTal = s.id.ToString() + ":" + "1";
+                    string cbbIdTal = s.id.ToString() + ":" + "2";
+                    string cbbbIdTal = s.id.ToString() + ":" + "3";
+
+                    cb.ID = cbIdTal;
+                    cbb.ID = cbbIdTal;
+                    cbbb.ID = cbbbIdTal;
+
+                    cb.Value = s.ratt1;
+                    cbb.Value = s.ratt2;
+                    cbbb.Value = s.ratt3;
+
+                    cb.text = s.svar1;
+                    cbb.text = s.svar2;
+                    cbbb.text = s.svar3;
+
                     allafragor.Controls.Add(cb);
                     allafragor.Controls.Add(cbb);
                     allafragor.Controls.Add(cbbb);
@@ -99,6 +143,7 @@ namespace G27_DenniLicious
                 
                 Svar S = new Svar();
 
+                S.id = node.Attributes["id"].Value;
                 S.svar1 = node["svarsalternativ1"].InnerText;
                 S.ratt1 = node["svarsalternativ1"].Attributes["svar"].Value;
 
