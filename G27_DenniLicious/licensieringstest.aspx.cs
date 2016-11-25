@@ -11,16 +11,19 @@ namespace G27_DenniLicious
 {
     public partial class Licensieringstest : System.Web.UI.Page
     {
+        
             HtmlGenericControl div = new HtmlGenericControl("div");
             HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
             Image img = new Image();
             textCb cb = new textCb();
             textCb cbb = new textCb();
             textCb cbbb = new textCb();
-        protected void Page_Load(object sender, EventArgs e)
+            int poängräkning;
+            protected void Page_Load(object sender, EventArgs e)
         {
             
-            HämtaFrågor(XMLToList());
+                HämtaFrågor(XMLToList());
+                CheckBox cbbbbb = new CheckBox();
             
             //string path = Server.MapPath("licensiering.xml");
             //XmlSwitchCase();
@@ -38,12 +41,70 @@ namespace G27_DenniLicious
 
         protected void btnSkickaLic_Click(object sender, EventArgs e)
         {
-            Fragor Q = new Fragor();
+           
+                foreach (Fragor Q in XMLToList())
+                {
 
-            foreach (Svar s in Q.svaren)
-            {
-                
-            }
+                    foreach (Control c in allafragor.Controls)
+                    {
+
+                        if ((c is textCb))
+                        {
+
+                            foreach (Svar s in Q.svaren)
+                            {
+                                int i = 0;
+                                if (s.ratt1 == "true")
+                                {
+                                    i++;
+                                }
+
+                                if (s.ratt2 == "true")
+                                {
+                                    i++;
+                                }
+
+                                if (s.ratt3 == "true")
+                                {
+                                    i++;
+                                }
+
+                                string cbIdTal = s.id.ToString() + ":" + "1";
+                                string cbbIdTal = s.id.ToString() + ":" + "2";
+                                string cbbbIdTal = s.id.ToString() + ":" + "3";
+                                if (i == 1)
+                                {
+                                    if (cbIdTal == ((textCb)c).ID)
+                                    {
+                                        
+                                        if (((textCb)c).Checked && s.ratt1 == "true")
+                                        {
+                                            poängräkning++;
+                                        }
+
+                                    }
+
+                                    else if (cbbIdTal == ((textCb)c).ID)
+                                    {
+                                        if (((textCb)c).Checked && s.ratt2 == "true")
+                                        {
+                                            poängräkning++;
+                                        }
+                                    }
+
+                                    else if (cbbbIdTal == ((textCb)c).ID)
+                                    {
+                                        if (((textCb)c).Checked && s.ratt3 == "true")
+                                        {
+                                            poängräkning++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
         }
 
         public void HämtaFrågor(List<Fragor> allaFragor) //Metod 2
@@ -90,7 +151,7 @@ namespace G27_DenniLicious
                     cb.ID = cbIdTal;
                     cbb.ID = cbbIdTal;
                     cbbb.ID = cbbbIdTal;
-
+                    
                     cb.Value = s.ratt1;
                     cbb.Value = s.ratt2;
                     cbbb.Value = s.ratt3;
@@ -180,6 +241,8 @@ namespace G27_DenniLicious
             return Test;
 
         }
+
+
         
         //public void XmlSwitchCase()
         //{
