@@ -42,7 +42,7 @@ namespace G27_DenniLicious
 
         public List<Anvandare> Anvandarna()
         {
-            string sql = "SELECT * FROM anvandare";
+            string sql = "SELECT * FROM anvandare order by id asc";
             dr = sqlFråga(sql);
 
             Anvandare a;
@@ -74,12 +74,15 @@ namespace G27_DenniLicious
                 string idd = Id.ToString();
                 string Namn = dr["namn"].ToString();
                 string Typ = dr["typ"].ToString();
+                bool aku = (bool)dr["aku"];
+                string akut = aku.ToString();
 
             vald = new string[]
                 {
                     idd,
                     Namn,
-                    Typ
+                    Typ,
+                    akut
                 };
             }
                 return vald;

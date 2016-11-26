@@ -19,7 +19,6 @@ namespace G27_DenniLicious
             if (!IsPostBack)
             {
                 Anvandarlista = Databas.Anvandarna();
-
                 
                 DropDownList1.DataTextField = "namn";
                 DropDownList1.DataValueField = "id";
@@ -36,16 +35,15 @@ namespace G27_DenniLicious
         {
             
             int va = int.Parse(aktuell);
-            string[] aktuellA = { "", "", "" };
+            string[] aktuellA = { "", "", "", "" };
             aktuellA = Databas.ValdAnvandare(va);
             //Databas.ValdAnvandare(va);
 
 
             Session["anvandarId"] = va;
-            
-            
 
-            if(aktuellA[2] == "Nyanställd" || aktuellA[2] == "Anställd")
+
+            if (aktuellA[2] == "Nyanställd" || aktuellA[2] == "Anställd" && aktuellA[3] != "True")
             {
                 Response.Redirect("StartaTest.aspx");
             }
@@ -53,6 +51,11 @@ namespace G27_DenniLicious
             else if (aktuellA[2]=="Admin")
             {
                 Response.Redirect("Admin.aspx");
+            }
+
+            else if (aktuellA[2] == "Anställd" && aktuellA[3] == "True")
+            {
+                Response.Redirect("ingatester.aspx");
             }
 
         }
