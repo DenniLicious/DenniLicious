@@ -12,8 +12,8 @@
       <hjalp></hjalp>
       <bild></bild>
       
-        <svarsalternativ1 svar="false">Norge</svarsalternativ1>
-        <svarsalternativ2 svar="true">Sverige</svarsalternativ2>
+        <svarsalternativ1 svar="true">Norge</svarsalternativ1>
+        <svarsalternativ2 svar="false">Sverige</svarsalternativ2>
         <svarsalternativ3 svar="false">Danmark</svarsalternativ3>
       
     </fraga>
