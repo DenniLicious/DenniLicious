@@ -41,14 +41,15 @@ namespace G27_DenniLicious
 
         protected void btnSkickaLic_Click(object sender, EventArgs e)
         {
-                int tal1 = 0;
-                int tal2 = 1;
-                int tal3 = 2;
+                int tal1 = -2;
+                int tal2 = -1;
+                int tal3 = 0;
                 foreach (Fragor Q in XMLToList())
                 {
-                    tal1++;
-                    tal2++;
-                    tal3++;
+                    tal1 = tal1+3;
+                    tal2 = tal2+3;
+                    tal3 = tal3+3;
+                    int antalrätta = 0;
 
                     foreach (Control c in allafragor.Controls)
                     {
@@ -118,7 +119,7 @@ namespace G27_DenniLicious
                                     //Om två svarsalternativ är rätt
                                     else if (i == 2)
                                     {
-                                        int antalrätta=0;
+                                        
 
                                         //Om det är den första checkboxen i frågan den kollar
                                         if (cbIdTal == ((CheckBox)c).ID)
@@ -127,32 +128,42 @@ namespace G27_DenniLicious
                                         if (((CheckBox)c).Checked && s.ratt1 == "true")
                                         {
                                             antalrätta++;
+                                            if (antalrätta == 2)
+                                            {
+                                                poängräkning++;
+                                            }
                                         }
                                         }
                                     
                                         //Om det är den andra checkboxen i frågan den kollar
-                                    else if(cbbIdTal == ((CheckBox)c).ID)
+                                    if(cbbIdTal == ((CheckBox)c).ID)
                                     {
                                         //Om den cb är ikryssad och det är rätt svarsalternativ
                                         if (((CheckBox)c).Checked && s.ratt2 == "true")
                                         {
                                             antalrätta++;
+                                            if (antalrätta == 2)
+                                            {
+                                                poängräkning++;
+                                            }
                                         }
                                     }
                                         //Om det är den tredje checkboxen i frågan den kollar
-                                    else if(cbbbIdTal == ((CheckBox)c).ID)
+                                    if(cbbbIdTal == ((CheckBox)c).ID)
                                     {
                                         //Om den cb är ikryssad och det är rätt svarsalternativ
                                         if (((CheckBox)c).Checked && s.ratt3 == "true")
                                         {
                                             antalrätta++;
+                                            if (antalrätta == 2)
+                                            {
+                                                poängräkning++;
+                                            }
                                         }
+                                        
                                     }
 
-                                        if(antalrätta == 2)
-                                        {
-                                            poängräkning++;
-                                        }
+                                        
                                     }
                                     //  if (cbbIdTal == ((CheckBox)c).ID)
                                     //{
@@ -170,7 +181,7 @@ namespace G27_DenniLicious
                                     //    }
                                     //}
                                    }
-                                
+                            
                             }
                         }
                     }
