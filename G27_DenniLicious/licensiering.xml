@@ -100,7 +100,7 @@
     <fraga id="12">
       <text>Vilken Bank är det här?</text>
       <hjalp></hjalp>
-      <bild img="/images/bjornbanck.jpg"></bild>
+      <bild>/images/bjornbanck.jpg</bild>
       <svarsalternativ1 svar="false">Swedbank</svarsalternativ1>
       <svarsalternativ2 svar="false">Danske bank</svarsalternativ2>
       <svarsalternativ3 svar="true">Björn Banck</svarsalternativ3>
@@ -207,7 +207,7 @@
     <fraga id="25">
       <text>Vilken bank har den här logotypen?</text>
       <hjalp></hjalp>
-      <bild img="/images/logoutext.png"></bild>
+      <bild>/images/logoutext.png</bild>
       <svarsalternativ1 svar="false">SEB</svarsalternativ1>
       <svarsalternativ2 svar="false">Skandiabanken</svarsalternativ2>
       <svarsalternativ3 svar="true">JE Banken</svarsalternativ3>
