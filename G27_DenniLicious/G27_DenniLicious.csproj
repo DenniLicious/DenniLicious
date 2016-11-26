@@ -70,6 +70,7 @@
     <Content Include="AKUtest.aspx" />
     <Content Include="images\bjornbanck.jpg" />
     <Content Include="images\logoutext.png" />
+    <Content Include="ingatester.aspx" />
     <Content Include="licensiering.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ingatester.aspx.cs">
+      <DependentUpon>ingatester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingatester.aspx.designer.cs">
+      <DependentUpon>ingatester.aspx</DependentUpon>
     </Compile>
     <Compile Include="Licensieringstest.aspx.cs">
       <DependentUpon>Licensieringstest.aspx</DependentUpon>
