@@ -15,7 +15,7 @@ namespace G27_DenniLicious
         public string frageText { get; set; }
         public string hjalpText { get; set; }
         public string kategori {get; set;}
-        public int frageId {get; set;}
+        public string frageId {get; set;}
         public string bild { get; set; }
         
 

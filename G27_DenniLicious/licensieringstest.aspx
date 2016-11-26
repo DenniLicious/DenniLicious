@@ -19,7 +19,22 @@
                 Det krävs minst 70 procent rätt totalt samt minst 60 procent rätt inom varje delområde för att bli godkänd. Resultatet redovisas direkt efter avslutat test.</p>
 
             <p>Lycka till!</p>
-    <div id="allafragor" runat="server"></div>
+    <div id="allafragor" runat="server">
+        <div id="f1" runat="server"> </div>
+        <div id="h1" runat="server"> </div>
+        <asp:Image ID="Image1" runat="server" />
+        <asp:CheckBox ID="CheckBox1" runat="server" />
+        <asp:CheckBox ID="CheckBox2" runat="server" />
+        <asp:CheckBox ID="CheckBox3" runat="server" />
+    
+        <div id="f2" runat="server"> </div>
+        <div id="h2" runat="server"> </div>
+        <asp:Image ID="Image2" runat="server" />
+        <asp:CheckBox ID="CheckBox4" runat="server" />
+        <asp:CheckBox ID="CheckBox5" runat="server" />
+        <asp:CheckBox ID="CheckBox6" runat="server" />
+
+    </div>
     <div id="alternativen" runat="server"></div>
     <div id="rattasvaret" runat="server"></div>
     <asp:Button ID="btnSkickaLic" runat="server" Text="Skicka in och rätta licensieringstestet" OnClick="btnSkickaLic_Click" />

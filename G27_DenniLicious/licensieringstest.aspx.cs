@@ -41,14 +41,19 @@ namespace G27_DenniLicious
 
         protected void btnSkickaLic_Click(object sender, EventArgs e)
         {
-           
+                int tal1 = 0;
+                int tal2 = 1;
+                int tal3 = 2;
                 foreach (Fragor Q in XMLToList())
                 {
+                    tal1++;
+                    tal2++;
+                    tal3++;
 
                     foreach (Control c in allafragor.Controls)
                     {
 
-                        if ((c is textCb))
+                        if ((c is CheckBox))
                         {
 
                             foreach (Svar s in Q.svaren)
@@ -69,48 +74,129 @@ namespace G27_DenniLicious
                                     i++;
                                 }
 
-                                string cbIdTal = s.id.ToString() + ":" + "1";
-                                string cbbIdTal = s.id.ToString() + ":" + "2";
-                                string cbbbIdTal = s.id.ToString() + ":" + "3";
+                                //string cbIdTal = s.id.ToString() + ":" + "1";
+                                //string cbbIdTal = s.id.ToString() + ":" + "2";
+                                //string cbbbIdTal = s.id.ToString() + ":" + "3";
+                                string cbIdTal = "CheckBox" + tal1.ToString();
+                                
+                                string cbbIdTal = "CheckBox" + tal2.ToString();
+                                
+                                string cbbbIdTal = "CheckBox" + tal3.ToString();
+                                
+                                //Är det ett rätt svarsalternativ
                                 if (i == 1)
                                 {
-                                    if (cbIdTal == ((textCb)c).ID)
+                                    //Om det är den första checkboxen i frågan den kollar
+                                    if (cbIdTal == ((CheckBox)c).ID)
                                     {
-                                        
-                                        if (((textCb)c).Checked && s.ratt1 == "true")
-                                        {
-                                            poängräkning++;
-                                        }
-
-                                    }
-
-                                    else if (cbbIdTal == ((textCb)c).ID)
-                                    {
-                                        if (((textCb)c).Checked && s.ratt2 == "true")
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt1 == "true")
                                         {
                                             poängräkning++;
                                         }
                                     }
-
-                                    else if (cbbbIdTal == ((textCb)c).ID)
+                                        //Om det är den andra checkboxen i frågan den kollar
+                                    else if(cbbIdTal == ((CheckBox)c).ID)
                                     {
-                                        if (((textCb)c).Checked && s.ratt3 == "true")
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt2 == "true")
+                                        {
+                                            poängräkning++;
+                                        }
+                                    }
+                                        //Om det är den tredje checkboxen i frågan den kollar
+                                    else if(cbbbIdTal == ((CheckBox)c).ID)
+                                    {
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt3 == "true")
                                         {
                                             poängräkning++;
                                         }
                                     }
                                 }
+                                
+                                    //Om två svarsalternativ är rätt
+                                    else if (i == 2)
+                                    {
+                                        int antalrätta=0;
+
+                                        //Om det är den första checkboxen i frågan den kollar
+                                        if (cbIdTal == ((CheckBox)c).ID)
+                                        {
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt1 == "true")
+                                        {
+                                            antalrätta++;
+                                        }
+                                        }
+                                    
+                                        //Om det är den andra checkboxen i frågan den kollar
+                                    else if(cbbIdTal == ((CheckBox)c).ID)
+                                    {
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt2 == "true")
+                                        {
+                                            antalrätta++;
+                                        }
+                                    }
+                                        //Om det är den tredje checkboxen i frågan den kollar
+                                    else if(cbbbIdTal == ((CheckBox)c).ID)
+                                    {
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (((CheckBox)c).Checked && s.ratt3 == "true")
+                                        {
+                                            antalrätta++;
+                                        }
+                                    }
+
+                                        if(antalrätta == 2)
+                                        {
+                                            poängräkning++;
+                                        }
+                                    }
+                                    //  if (cbbIdTal == ((CheckBox)c).ID)
+                                    //{
+                                    //    if (((CheckBox)c).Checked && s.ratt1 == "true")
+                                    //    {
+                                    //        poängräkning++;
+                                    //    }
+                                    //}
+
+                                    //else if (cbbbIdTal == ((CheckBox)c).ID)
+                                    //{
+                                    //    if (((CheckBox)c).Checked && s.ratt3 == "true")
+                                    //    {
+                                    //        poängräkning++;
+                                    //    }
+                                    //}
+                                   }
+                                
                             }
                         }
                     }
                 }
             
-        }
+        
 
         public void HämtaFrågor(List<Fragor> allaFragor) //Metod 2
         {
+            
             foreach (Fragor Q in allaFragor)
             {
+               if(Q.frageId == "1")
+               {
+                   f1.InnerText = Q.frageText;
+                   h1.InnerText = Q.hjalpText;
+                   Image1.ImageUrl = Q.bild;
+               }
+
+               else if (Q.frageId == "2")
+               {
+                   f2.InnerText = Q.frageText;
+                   h2.InnerText = Q.hjalpText;
+                   Image2.ImageUrl = Q.bild;
+               }
+                
                 //HtmlGenericControl div = new HtmlGenericControl("div");
                 //HtmlGenericControl divHjalp = new HtmlGenericControl("divHjalp");
                 //Image img = new Image();
@@ -121,48 +207,64 @@ namespace G27_DenniLicious
                 //HtmlGenericControl svarA = new HtmlGenericControl("svarA");
                 //HtmlGenericControl svarB = new HtmlGenericControl("svarB");
 
-                div = new HtmlGenericControl("div");
-                divHjalp = new HtmlGenericControl("divHjalp");
-                img = new Image();
+                ////Koden som vi hade innan hårdkodning
+                //div = new HtmlGenericControl("div");
+                //divHjalp = new HtmlGenericControl("divHjalp");
+                //img = new Image();
                 
                  
-                cb = new textCb();
-                cbb = new textCb();
-                cbbb = new textCb();
+                //cb = new textCb();
+                //cbb = new textCb();
+                //cbbb = new textCb();
 
-                divHjalp.InnerText = Q.hjalpText;
-                div.InnerText = Q.frageText;
-                img.ImageUrl = Q.bild;
-                allafragor.Controls.Add(div);
-                allafragor.Controls.Add(divHjalp);
-                allafragor.Controls.Add(img);
-
+                //divHjalp.InnerText = Q.hjalpText;
+                //div.InnerText = Q.frageText;
+                //img.ImageUrl = Q.bild;
+                //allafragor.Controls.Add(div);
+                //allafragor.Controls.Add(divHjalp);
+                //allafragor.Controls.Add(img);
+                ////Slut på den
                 
                 //                div1.InnerText = "";
                 //                allafragor.Controls.Add(img);
 
                 foreach (Svar s in Q.svaren)
                 {
-                    
-                    string cbIdTal = s.id.ToString() + ":" + "1";
-                    string cbbIdTal = s.id.ToString() + ":" + "2";
-                    string cbbbIdTal = s.id.ToString() + ":" + "3";
+                    if(s.id == "1")
+                    {
+                        CheckBox1.Text = s.svar1;
+                        CheckBox2.Text = s.svar2;
+                        CheckBox3.Text = s.svar3;
+                    }
 
-                    cb.ID = cbIdTal;
-                    cbb.ID = cbbIdTal;
-                    cbbb.ID = cbbbIdTal;
-                    
-                    cb.Value = s.ratt1;
-                    cbb.Value = s.ratt2;
-                    cbbb.Value = s.ratt3;
+                    else if (s.id == "2")
+                    {
+                        CheckBox4.Text = s.svar1;
+                        CheckBox5.Text = s.svar2;
+                        CheckBox6.Text = s.svar3;
+                    }
 
-                    cb.text = s.svar1;
-                    cbb.text = s.svar2;
-                    cbbb.text = s.svar3;
+                    ////Gammal kod för att generera svar
+                    //string cbIdTal = s.id.ToString() + ":" + "1";
+                    //string cbbIdTal = s.id.ToString() + ":" + "2";
+                    //string cbbbIdTal = s.id.ToString() + ":" + "3";
 
-                    allafragor.Controls.Add(cb);
-                    allafragor.Controls.Add(cbb);
-                    allafragor.Controls.Add(cbbb);
+                    //cb.ID = cbIdTal;
+                    //cbb.ID = cbbIdTal;
+                    //cbbb.ID = cbbbIdTal;
+
+                    //cb.Value = s.ratt1;
+                    //cbb.Value = s.ratt2;
+                    //cbbb.Value = s.ratt3;
+
+                    //cb.text = s.svar1;
+                    //cbb.text = s.svar2;
+                    //cbbb.text = s.svar3;
+
+                    //allafragor.Controls.Add(cb);
+                    //allafragor.Controls.Add(cbb);
+                    //allafragor.Controls.Add(cbbb);
+                    ////Slut
                 }
 
                 
@@ -201,7 +303,7 @@ namespace G27_DenniLicious
                 Q.frageText = node["text"].InnerText;
                 Q.hjalpText = node["hjalp"].InnerText;
                 Q.bild = node["bild"].InnerText;
-                
+                Q.frageId = node.Attributes["id"].Value;
                 Svar S = new Svar();
 
                 S.id = node.Attributes["id"].Value;
