@@ -10,7 +10,7 @@ namespace G27_DenniLicious
     public partial class StartaTest : System.Web.UI.Page
     {
         Db Databas = new Db();
-        string[] aktuellA = { "", "", "" };
+        string[] aktuellA = { "", "", "" , ""};
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -19,7 +19,6 @@ namespace G27_DenniLicious
             if (!IsPostBack)
             {
                 Anvandarlista = Databas.Anvandarna();
-
                 
                 DropDownList1.DataTextField = "namn";
                 DropDownList1.DataValueField = "id";
