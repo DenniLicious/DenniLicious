@@ -206,4 +206,9 @@
     <div id="produktPoang" runat="server"></div>
     <div id="ekonomiPoang" runat="server"></div>
     <div id="etikPoang" runat="server"></div>
+    <div></div>
+    <div id="facit" runat="server">
+    <h1>Facit</h1>
+    <p>Här visas testets facit, jämför gärna med dina egna svar.</p>
+    </div>
 </asp:Content>

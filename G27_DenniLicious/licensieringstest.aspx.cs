@@ -30,6 +30,7 @@ namespace G27_DenniLicious
                 ID = (int)Session["anvandarId"];
                 HämtaFrågor(XMLToList());
                 CheckBox cbbbbb = new CheckBox();
+                facit.Visible = false;
             
             //string path = Server.MapPath("licensiering.xml");
             //XmlSwitchCase();
@@ -47,6 +48,8 @@ namespace G27_DenniLicious
 
         protected void btnSkickaLic_Click(object sender, EventArgs e)
         {
+            facit.Visible = true;
+            HtmlGenericControl div = new HtmlGenericControl("div");
                 int tal1 = -2;
                 int tal2 = -1;
                 int tal3 = 0;
@@ -76,7 +79,32 @@ foreach (Svar s in Q.svaren)
                                 else if (Q.kategori == "Etik och regelverk")
                                 {
                                     antalEtik++;
-                                }                
+                                }
+
+                                if (s.ratt1 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar1;
+                                    facit.Controls.Add(div);
+                                }
+
+                                if (s.ratt2 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar2;
+                                    facit.Controls.Add(div);
+                                }
+
+                                if (s.ratt3 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar3;
+                                    facit.Controls.Add(div);
+                                }
+      
 
                     foreach (Control c in allafragor.Controls)
                     {
@@ -89,16 +117,19 @@ foreach (Svar s in Q.svaren)
                                 if (s.ratt1 == "true")
                                 {
                                     i++;
+                                    
                                 }
 
                                 if (s.ratt2 == "true")
                                 {
                                     i++;
+                                    
                                 }
 
                                 if (s.ratt3 == "true")
                                 {
                                     i++;
+                                    
                                 }
 
                                 //string cbIdTal = s.id.ToString() + ":" + "1";
@@ -402,6 +433,7 @@ foreach (Svar s in Q.svaren)
                                    }
                             
                             }
+                            
                         }
                     }
 
@@ -458,6 +490,7 @@ foreach (Svar s in Q.svaren)
                 etikPoang.InnerText = "Etik och regelverk: Du är " + godkantEtik + ". Antal rätt totalt: " + poängEtik + " av " + antalEtik + " frågor. Dvs. " + procentEtik + "%.";
                 btnSkickaLic.Enabled = false;
             
+           
             //rattasvaret.InnerText = poängräkning.ToString();
                 //alternativen.InnerText = poängProdukter.ToString();
                 }

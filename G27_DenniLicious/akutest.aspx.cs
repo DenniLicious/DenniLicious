@@ -18,9 +18,11 @@ namespace G27_DenniLicious
         string test_typ;
         Db Databas = new Db();
         int ID;
+        HtmlGenericControl div = new HtmlGenericControl("div");
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            facit.Visible = false;
             ID = (int)Session["anvandarId"];
             HämtaFrågor(XMLToList());
         }
@@ -368,6 +370,7 @@ namespace G27_DenniLicious
 
         protected void btnSkickaAku_Click(object sender, EventArgs e)
         {
+            facit.Visible = true;
                 int tal1 = -2;
                 int tal2 = -1;
                 int tal3 = 0;
@@ -400,7 +403,31 @@ foreach (Svar s in Q.svaren)
                                 else if (Q.kategori == "Etik och regelverk")
                                 {
                                     antalEtik++;
-                                }                
+                                }
+
+                                if (s.ratt1 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar1;
+                                    facit.Controls.Add(div);
+                                }
+
+                                if (s.ratt2 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar2;
+                                    facit.Controls.Add(div);
+                                }
+
+                                if (s.ratt3 == "true")
+                                {
+
+                                    div = new HtmlGenericControl("div");
+                                    div.InnerText = "Fråga nr: " + s.id + ". Rätt svar: " + s.svar3;
+                                    facit.Controls.Add(div);
+                                }
 
                     foreach (Control c in allafragor.Controls)
                     {
