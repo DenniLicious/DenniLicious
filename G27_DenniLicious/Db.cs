@@ -231,5 +231,17 @@ namespace G27_DenniLicious
 
             cmd.ExecuteNonQuery();
         }
+
+        public void aterstallAku()
+        {
+            string sql = "update anvandare set aku='false'";
+
+
+            cmd = new NpgsqlCommand(sql, conn);
+            
+
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }

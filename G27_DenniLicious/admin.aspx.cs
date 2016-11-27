@@ -19,6 +19,7 @@ namespace G27_DenniLicious
                 ddProvdeltagare.DataValueField = "id";
                 ddProvdeltagare.DataSource = Databas.Provdeltagarna();
                 ddProvdeltagare.DataBind();
+                aterstallAku.Enabled = false;
             }
 
         }
@@ -85,6 +86,20 @@ namespace G27_DenniLicious
             
             
         }
+
+        protected void aterstallAku_Click(object sender, EventArgs e)
+        {
+            Databas.aterstallAku();
+        }
+
+        protected void aktiveraAkuKnapp_Click(object sender, EventArgs e)
+        {
+            aterstallAku.Enabled = true;
+
+        }
+
+        
+
 
 
     }

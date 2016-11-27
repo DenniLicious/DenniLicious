@@ -58,5 +58,12 @@
         </asp:TableRow>
     </asp:Table>
 
+    <h3>Har ett nytt test av Årligt Kunskapsuppdatering(ÅKU) kommit?</h3>
+    <p>Tryck då på knappen för att nollställa alla anställdas tidigare provresultat av ÅKU till noll</p>
+    <p>Funktionen är endast till för att nollställa de anställdas ÅKU-resultat när ett nytt ÅKU kommit.</p>
+    <p> Informationen som försvinner går inte att återställa igen. Använda bara funktionen om du är säker.</p>
+    <p> Tryck på första knappen för att sedan kunna använda knappen för att återställa ÅKU. </p>
+    <asp:Button ID="aktiveraAkuKnapp" runat="server" Text="Aktivera knapp för nollställning av ÅKU" onClick="aktiveraAkuKnapp_Click"/>
+    <asp:Button ID="aterstallAku" runat="server" Text="OBS! NOLLSTÄLL ÅKU" Style="background-color: red" OnClick="aterstallAku_Click"/>
 
 </asp:Content>
