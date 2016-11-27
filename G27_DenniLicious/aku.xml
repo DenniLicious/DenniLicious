@@ -17,7 +17,7 @@
       <fraga id="2">
         <text>Är det här den nya 50-kronorssedeln?</text>
         <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
-        <bild>/images/zlatan.jpg"</bild>
+        <bild>/images/zlatan.jpg</bild>
         <svarsalternativ1 svar="false">Ja</svarsalternativ1>
         <svarsalternativ2 svar="true">Nej</svarsalternativ2>
         <svarsalternativ3 svar="true">Nej, men det borde vara</svarsalternativ3>
@@ -68,7 +68,7 @@
       <fraga id="8">
         <text>Vilken Bank är det här?</text>
         <hjalp></hjalp>
-        <bild>/images/bjornbanck.jpg"</bild>
+        <bild>/images/bjornbanck.jpg</bild>
         <svarsalternativ1 svar="false">Swedbank</svarsalternativ1>
         <svarsalternativ2 svar="false">Danske bank</svarsalternativ2>
         <svarsalternativ3 svar="true">Björn Banck</svarsalternativ3>

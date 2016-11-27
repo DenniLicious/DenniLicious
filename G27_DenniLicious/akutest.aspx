@@ -124,4 +124,10 @@
         <asp:CheckBox ID="CheckBox45" runat="server" />
     </div>
 
+    <asp:Button ID="btnSkickaAku" runat="server" Text="Skicka in och rätta årligt kunskapstest" OnClick="btnSkickaAku_Click"/>
+
+    <div id="totalPoang" runat="server"></div>
+    <div id="produktPoang" runat="server"></div>
+    <div id="ekonomiPoang" runat="server"></div>
+    <div id="etikPoang" runat="server"></div>
 </asp:Content>

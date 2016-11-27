@@ -16,6 +16,8 @@ namespace G27_DenniLicious
             HämtaFrågor(XMLToList());
         }
 
+
+
         public List<Fragor> XMLToList()
         {
             List<Fragor> Test = new List<Fragor>();
@@ -354,5 +356,12 @@ namespace G27_DenniLicious
                 }
             }
         }
+
+        protected void btnSkickaAku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
