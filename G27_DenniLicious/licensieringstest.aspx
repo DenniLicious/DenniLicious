@@ -200,7 +200,10 @@
         <asp:CheckBox ID="CheckBox75" runat="server" />
     </div>
 
-    <div id="alternativen" runat="server"></div>
-    <div id="rattasvaret" runat="server"></div>
     <asp:Button ID="btnSkickaLic" runat="server" Text="Skicka in och rätta licensieringstestet" OnClick="btnSkickaLic_Click" />
+
+    <div id="totalPoang" runat="server"></div>
+    <div id="produktPoang" runat="server"></div>
+    <div id="ekonomiPoang" runat="server"></div>
+    <div id="etikPoang" runat="server"></div>
 </asp:Content>

@@ -19,7 +19,9 @@ namespace G27_DenniLicious
             textCb cbb = new textCb();
             textCb cbbb = new textCb();
             int poängräkning;
-            int poängProdukter, poängEkonomi, poängEtik;
+            double poängProdukter, poängEkonomi, poängEtik;
+            double antalTotal, antalProdukt, antalEkonomi, antalEtik;
+            string godkantProv = "Godkänd";
             
             protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,6 +50,7 @@ namespace G27_DenniLicious
                 int tal3 = 0;
                 foreach (Fragor Q in XMLToList())
                 {
+                    antalTotal++;
                     tal1 = tal1+3;
                     tal2 = tal2+3;
                     tal3 = tal3+3;
@@ -57,6 +60,21 @@ namespace G27_DenniLicious
                     int tredjeRatta = 0;
 foreach (Svar s in Q.svaren)
                             {
+                                if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                {
+                                    antalProdukt++;
+                                }
+
+                                else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                {
+                                    antalEkonomi++;
+                                }
+
+                                else if (Q.kategori == "Etik och regelverk")
+                                {
+                                    antalEtik++;
+                                }                
+
                     foreach (Control c in allafragor.Controls)
                     {
                         
@@ -381,8 +399,52 @@ foreach (Svar s in Q.svaren)
                             }
                         }
                     }
-                rattasvaret.InnerText = poängräkning.ToString();
-                alternativen.InnerText = poängProdukter.ToString();
+
+                double procentResultat = (poängräkning / antalTotal) * 100;
+                double procentProdukt = (poängProdukter / antalProdukt) * 100;
+                double procentEkonomi = (poängEkonomi / antalEkonomi) * 100;
+                double procentEtik = (poängEtik / antalEtik) * 100;
+
+                string godkantresultat = "Underkänd";
+                string godkantProdukt = "Underkänd";
+                string godkantEkonomi = "Underkänd";
+                string godkantEtik = "Underkänd";
+
+            if(procentResultat >= 70)
+            {
+                godkantresultat = "Godkänd";
+            }
+
+            if(procentProdukt >= 60)
+            {
+                godkantProdukt = "Godkänd";
+            }
+
+            if(procentEkonomi >= 60)
+            {
+                godkantEkonomi = "Godkänd";
+            }
+
+            if(procentEtik >= 60)
+            {
+                godkantEtik = "Godkänd";
+            }
+
+            if ((godkantresultat == "Godkänd") && (godkantProdukt == "Godkänd") && (godkantEkonomi == "Godkänd") && (godkantEtik == "Godkänd"))
+            {
+                godkantProv = "Godkänd";
+            }
+
+            else
+            {
+                godkantProv = "Underkänd";
+            }
+                totalPoang.InnerText = "Totalresultat: Du är " +  godkantresultat + ". Antal rätt totalt: " + poängräkning + " av " + antalTotal + " frågor. Dvs. " + procentResultat + "%." ;
+                produktPoang.InnerText = "Produkter och hantering av kundens affärer: Du är " + godkantProdukt+ ". Antal rätt totalt: " + poängProdukter + " av " + antalProdukt + " frågor. Dvs. " + procentProdukt + "%.";
+                ekonomiPoang.InnerText = "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi: Du är " + godkantEkonomi + ". Antal rätt totalt: " + poängEkonomi + " av " + antalEkonomi + " frågor. Dvs. " + procentEkonomi + "%.";
+                etikPoang.InnerText = "Etik och regelverk: Du är " + godkantEtik + ". Antal rätt totalt: " + poängEtik + " av " + antalEtik + " frågor. Dvs. " + procentEtik + "%.";
+                //rattasvaret.InnerText = poängräkning.ToString();
+                //alternativen.InnerText = poängProdukter.ToString();
                 }
             
         

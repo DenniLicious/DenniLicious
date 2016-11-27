@@ -1399,24 +1399,6 @@ namespace G27_DenniLicious {
         protected global::System.Web.UI.WebControls.CheckBox CheckBox75;
         
         /// <summary>
-        /// alternativen control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alternativen;
-        
-        /// <summary>
-        /// rattasvaret control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rattasvaret;
-        
-        /// <summary>
         /// btnSkickaLic control.
         /// </summary>
         /// <remarks>
@@ -1424,5 +1406,41 @@ namespace G27_DenniLicious {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSkickaLic;
+        
+        /// <summary>
+        /// totalPoang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalPoang;
+        
+        /// <summary>
+        /// produktPoang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl produktPoang;
+        
+        /// <summary>
+        /// ekonomiPoang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ekonomiPoang;
+        
+        /// <summary>
+        /// etikPoang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl etikPoang;
     }
 }
