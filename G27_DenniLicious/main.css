@@ -137,7 +137,8 @@ p{
     max-width:75%;
 }
 
-#ContentPlaceHolder1_allafragor div2{
+/*Kategorierna (rubriker)*/
+#ContentPlaceHolder1_div1, #ContentPlaceHolder1_div2, #ContentPlaceHolder1_div3{
     padding-top: 25px;
     font-weight:bold;
     display:block;

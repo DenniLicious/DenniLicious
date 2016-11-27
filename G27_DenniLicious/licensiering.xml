@@ -7,198 +7,210 @@
     <!--barnelement-->
     <fraga id="1">
       <!--attribut-->
-      <kategori>Produkter och hantering av kundens affärer</kategori>
       <text>Vilket land kommer det mobila betalningsföretaget iZettle ifrån?</text>
       <hjalp></hjalp>
       <bild></bild>
-      
-        <svarsalternativ1 svar="false">Norge</svarsalternativ1>
-        <svarsalternativ2 svar="true">Sverige</svarsalternativ2>
-        <svarsalternativ3 svar="false">Danmark</svarsalternativ3>
-      
+      <svarsalternativ1 svar="false">Norge</svarsalternativ1>
+      <svarsalternativ2 svar="true">Sverige</svarsalternativ2>
+      <svarsalternativ3 svar="false">Danmark</svarsalternativ3>
     </fraga>
     <fraga id="2">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
       <text>Är det här den nya 50-kronorssedeln?</text>
       <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
       <bild>/images/zlatan.jpg</bild>
-      
-        <svarsalternativ1 svar="false">Ja</svarsalternativ1>
-        <svarsalternativ2 svar="true">Nej</svarsalternativ2>
-        <svarsalternativ3 svar="true">Nej, men det borde vara</svarsalternativ3>
-      
+      <svarsalternativ1 svar="false">Ja</svarsalternativ1>
+      <svarsalternativ2 svar="true">Nej</svarsalternativ2>
+      <svarsalternativ3 svar="true">Nej, men det borde vara</svarsalternativ3>
     </fraga>
-  </kategori>
-    <!--<fraga id="3">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Vad väger en 1000-kronorssedel?</text>
-      <svarsalternativ svar="true">1,01 gram</svarsalternativ>
-      <svarsalternativ svar="false">2,02 gram</svarsalternativ>
-      <svarsalternativ svar="false">3,03 gram</svarsalternativ>
-    </fraga>
-    <fraga id="4">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Hur mycket motsvarade 5000kr för 100 år sedan?</text>
-      <svarsalternativ svar="false">50 747kr</svarsalternativ>
-      <svarsalternativ svar="true">199 043kr</svarsalternativ>
-      <svarsalternativ svar="false">475 632kr</svarsalternativ>
-    </fraga>
-    <fraga id="5">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Vad är de svenska sedlarna tillverkade av? </text>
-      <svarsalternativ svar="true">Råbomull</svarsalternativ>
-      <svarsalternativ svar="false">Silke</svarsalternativ>
-      <svarsalternativ svar="false">Papper</svarsalternativ>
-    </fraga>
-    <fraga id="6">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Vad heter Sveriges finansminister?</text>
-      <svarsalternativ svar="false">Magdalena Svensson</svarsalternativ>
-      <svarsalternativ svar="false">Margaretha Svensson</svarsalternativ>
-      <svarsalternativ svar="true">Magdalena Andersson</svarsalternativ>
-    </fraga>
-    <fraga id="7">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Vad är räntan på CSN-lån i Sverige under 2016?</text>
-      <svarsalternativ svar="false">0,3%</svarsalternativ>
-      <svarsalternativ svar="true">0,6%</svarsalternativ>
-      <svarsalternativ svar="false">0,9%</svarsalternativ>
-    </fraga>
-    <fraga id="8">
-      <kategori>Produkter och hantering av kundens affärer</kategori>
-      <text>Det har kommit nya 100- och 500-kronorssedlar, när måste du byta in dina gamla?</text>
-      <svarsalternativ svar="false">31 december 2016</svarsalternativ>
-      <svarsalternativ svar="true">30 juni 2017</svarsalternativ>
-      <svarsalternativ svar="false">31 december 2017</svarsalternativ>
-    </fraga>
+  <fraga id="3">
+    <text>Vad väger en 1000-kronorssedel?</text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="true">1,01 gram</svarsalternativ1>
+    <svarsalternativ2 svar="false">2,02 gram</svarsalternativ2>
+    <svarsalternativ3 svar="false">3,03 gram</svarsalternativ3>
+  </fraga>
+  <fraga id="4">
+    <text>Hur mycket motsvarade 5000kr för 100 år sedan?</text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="false">50 747kr</svarsalternativ1>
+    <svarsalternativ2 svar="true">199 043kr</svarsalternativ2>
+    <svarsalternativ3 svar="false">475 632kr</svarsalternativ3>
+  </fraga>
+  <fraga id="5">
+    <text>Vad är de svenska sedlarna tillverkade av? </text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="true">Råbomull</svarsalternativ1>
+    <svarsalternativ2 svar="false">Silke</svarsalternativ2>
+    <svarsalternativ3 svar="false">Papper</svarsalternativ3>
+  </fraga>
+  <fraga id="6">
+    <text>Vad heter Sveriges finansminister?</text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="false">Magdalena Svensson</svarsalternativ1>
+    <svarsalternativ2 svar="false">Margaretha Svensson</svarsalternativ2>
+    <svarsalternativ3 svar="true">Magdalena Andersson</svarsalternativ3>
+  </fraga>
+  <fraga id="7">
+    <text>Vad är räntan på CSN-lån i Sverige under 2016?</text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="false">0,3%</svarsalternativ1>
+    <svarsalternativ2 svar="true">0,6%</svarsalternativ2>
+    <svarsalternativ3 svar="false">0,9%</svarsalternativ3>
+  </fraga>
+  <fraga id="8">
+    <text>Det har kommit nya 100- och 500-kronorssedlar, när måste du byta in dina gamla?</text>
+    <hjalp></hjalp>
+    <bild></bild>
+    <svarsalternativ1 svar="false">31 december 2016</svarsalternativ1>
+    <svarsalternativ2 svar="true">30 juni 2017</svarsalternativ2>
+    <svarsalternativ3 svar="false">31 december 2017</svarsalternativ3>
+  </fraga>
   </kategori>
 
   <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi">
     <fraga id="9">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad kallas nationalekonomins två huvudavdelningar?</text>
       <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
-      <svarsalternativ svar="true">Makroekonomi</svarsalternativ>
-      <svarsalternativ svar="false">Mekroekonomi</svarsalternativ>
-      <svarsalternativ svar="true">Mikroekonomi</svarsalternativ>
+      <bild></bild>
+      <svarsalternativ1 svar="true">Makroekonomi</svarsalternativ1>
+      <svarsalternativ2 svar="false">Mekroekonomi</svarsalternativ2>
+      <svarsalternativ3 svar="true">Mikroekonomi</svarsalternativ3>
     </fraga>
     <fraga id="10">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad kallas det när en valutas värde stiger i förhållande till andra valutors?</text>
-      <svarsalternativ svar="false">Depreciering</svarsalternativ>
-      <svarsalternativ svar="false">Applicering</svarsalternativ>
-      <svarsalternativ svar="true">Appreciering</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Depreciering</svarsalternativ1>
+      <svarsalternativ2 svar="false">Applicering</svarsalternativ2>
+      <svarsalternativ3 svar="true">Appreciering</svarsalternativ3>
     </fraga>
     <fraga id="11">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad är detta en definition av: Värde av alla de varor och tjänster som produceras i ett land för att användas till konsumtion, export och investeringar under en period, vanligtvis ett år eller ett kvartal.?</text>
-      <svarsalternativ svar="false">Export</svarsalternativ>
-      <svarsalternativ svar="true">Bruttonationalprodukt</svarsalternativ>
-      <svarsalternativ svar="false">Konsumering</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Export</svarsalternativ1>
+      <svarsalternativ2 svar="true">Bruttonationalprodukt</svarsalternativ2>
+      <svarsalternativ3 svar="false">Konsumering</svarsalternativ3>
     </fraga>
     <fraga id="12">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vilken Bank är det här?</text>
-      <bild img="/images/bjornbanck.jpg"></bild>
-      <svarsalternativ svar="false">Swedbank</svarsalternativ>
-      <svarsalternativ svar="false">Danske bank</svarsalternativ>
-      <svarsalternativ svar="true">Björn Banck</svarsalternativ>
+      <hjalp></hjalp>
+      <bild>/images/bjornbanck.jpg</bild>
+      <svarsalternativ1 svar="false">Swedbank</svarsalternativ1>
+      <svarsalternativ2 svar="false">Danske bank</svarsalternativ2>
+      <svarsalternativ3 svar="true">Björn Banck</svarsalternativ3>
     </fraga>
     <fraga id="13">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad står förkortningen ISK för?</text>
-      <svarsalternativ svar="false">Idrottens sparkonto</svarsalternativ>
-      <svarsalternativ svar="true">Investeringssparkonto</svarsalternativ>
-      <svarsalternativ svar="false">Internationella spararnas konton</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Idrottens sparkonto</svarsalternativ1>
+      <svarsalternativ2 svar="true">Investeringssparkonto</svarsalternativ2>
+      <svarsalternativ3 svar="false">Internationella spararnas konton</svarsalternativ3>
     </fraga>
     <fraga id="14">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad heter den avgift som en kund debiteras vid handel med värdepapper (exempelvis aktier)?</text>
-      <svarsalternativ svar="true">Courtage</svarsalternativ>
-      <svarsalternativ svar="false">Handelstillägg</svarsalternativ>
-      <svarsalternativ svar="false">Amortering</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="true">Courtage</svarsalternativ1>
+      <svarsalternativ2 svar="false">Handelstillägg</svarsalternativ2>
+      <svarsalternativ3 svar="false">Amortering</svarsalternativ3>
     </fraga>
     <fraga id="15">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad betyder outsourcing?</text>
-      <svarsalternativ svar="false">Att begära företrädesrätt vid försäljning</svarsalternativ>
-      <svarsalternativ svar="true">Att lägga ut delar av sin verksamhet på entreprenad</svarsalternativ>
-      <svarsalternativ svar="false">Att sälja ut kända märken</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Att begära företrädesrätt vid försäljning</svarsalternativ1>
+      <svarsalternativ2 svar="true">Att lägga ut delar av sin verksamhet på entreprenad</svarsalternativ2>
+      <svarsalternativ3 svar="false">Att sälja ut kända märken</svarsalternativ3>
     </fraga>
     <fraga id="16">
-      <kategori>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</kategori>
       <text>Vad händer med penningvärdet vid inflation?</text>
-      <svarsalternativ svar="false">Ökar</svarsalternativ>
-      <svarsalternativ svar="false">Ingenting</svarsalternativ>
-      <svarsalternativ svar="true">Minskar</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Ökar</svarsalternativ1>
+      <svarsalternativ2 svar="false">Ingenting</svarsalternativ2>
+      <svarsalternativ3 svar="true">Minskar</svarsalternativ3>
     </fraga>
   </kategori>
 
   <kategori typ="Etik och regelverk">
     <fraga id="17">
-      <kategori>Etik och regelverk</kategori>
       <text>Om en gäldenär inte betalar en fordran är hen skyldig att erlägga dröjsmålsränta. Dröjsmålsräntan beräknas utifrån Riksbankens referensränta plus X många procentenheter. Hur många?</text>
-      <svarsalternativ svar="false">Sex procentenheter</svarsalternativ>
-      <svarsalternativ svar="true">Åtta procentenheter</svarsalternativ>
-      <svarsalternativ svar="false">Tio procentenheter</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Sex procentenheter</svarsalternativ1>
+      <svarsalternativ2 svar="true">Åtta procentenheter</svarsalternativ2>
+      <svarsalternativ3 svar="false">Tio procentenheter</svarsalternativ3>
     </fraga>
     <fraga id="18">
-      <kategori>Etik och regelverk</kategori>
       <text>Vilken lag faller dröjsmålsräntan inom?</text>
-      <svarsalternativ svar="false">Riksbankslagen</svarsalternativ>
-      <svarsalternativ svar="false">Skuldebrevslagen</svarsalternativ>
-      <svarsalternativ svar="true">Räntelagen</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Riksbankslagen</svarsalternativ1>
+      <svarsalternativ2 svar="false">Skuldebrevslagen</svarsalternativ2>
+      <svarsalternativ3 svar="true">Räntelagen</svarsalternativ3>
     </fraga>
     <fraga id="19">
-      <kategori>Etik och regelverk</kategori>
       <text>När började det nya amorteringskravet för köp av bostad att gälla?</text>
-      <svarsalternativ svar="true">1 juni 2016</svarsalternativ>
-      <svarsalternativ svar="false">1 juli 2016</svarsalternativ>
-      <svarsalternativ svar="false">1 augusti 2016</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="true">1 juni 2016</svarsalternativ1>
+      <svarsalternativ2 svar="false">1 juli 2016</svarsalternativ2>
+      <svarsalternativ3 svar="false">1 augusti 2016</svarsalternativ3>
     </fraga>
     <fraga id="20">
-      <kategori>Etik och regelverk</kategori>
       <text>Vem har rätt att delta på en årsstämma?</text>
-      <svarsalternativ svar="false">Vem som helst</svarsalternativ>
-      <svarsalternativ svar="true">Den som äger minst en aktie i bolaget</svarsalternativ>
-      <svarsalternativ svar="false">Den som sitter i bolagets styrelse</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Vem som helst</svarsalternativ1>
+      <svarsalternativ2 svar="true">Den som äger minst en aktie i bolaget</svarsalternativ2>
+      <svarsalternativ3 svar="false">Den som sitter i bolagets styrelse</svarsalternativ3>
     </fraga>
     <fraga id="21">
-      <kategori>Etik och regelverk</kategori>
       <text>Vad betyder ocker?</text>
-      <svarsalternativ svar="false">Att utnyttja insiderinformation</svarsalternativ>
-      <svarsalternativ svar="true">Att göra oskälig vinst</svarsalternativ>
-      <svarsalternativ svar="false">Att missbruka ett förtroende</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Att utnyttja insiderinformation</svarsalternativ1>
+      <svarsalternativ2 svar="true">Att göra oskälig vinst</svarsalternativ2>
+      <svarsalternativ3 svar="false">Att missbruka ett förtroende</svarsalternativ3>
     </fraga>
     <fraga id="22">
-      <kategori>Etik och regelverk</kategori>
       <text>Vad betyder lösöre?</text>
-      <svarsalternativ svar="false">Mindre vinst</svarsalternativ>
-      <svarsalternativ svar="false">Efterskänkta skulder</svarsalternativ>
-      <svarsalternativ svar="true">Flyttbar egendom</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">Mindre vinst</svarsalternativ1>
+      <svarsalternativ2 svar="false">Efterskänkta skulder</svarsalternativ2>
+      <svarsalternativ3 svar="true">Flyttbar egendom</svarsalternativ3>
     </fraga>
     <fraga id="23">
-      <kategori>Etik och regelverk</kategori>
       <text>Vad kallas kortbedrägeri med ett annat ord?</text>
-      <svarsalternativ svar="true">Skimning</svarsalternativ>
-      <svarsalternativ svar="false">Skuggning</svarsalternativ>
-      <svarsalternativ svar="false">Skyfall</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="true">Skimning</svarsalternativ1>
+      <svarsalternativ2 svar="false">Skuggning</svarsalternativ2>
+      <svarsalternativ3 svar="false">Skyfall</svarsalternativ3>
     </fraga>
     <fraga id="24">
-      <kategori>Etik och regelverk</kategori>
       <text>Vad är den allmänna momssatsen i Sverige?</text>
-      <svarsalternativ svar="false">20%</svarsalternativ>
-      <svarsalternativ svar="true">25%</svarsalternativ>
-      <svarsalternativ svar="false">30%</svarsalternativ>
+      <hjalp></hjalp>
+      <bild></bild>
+      <svarsalternativ1 svar="false">20%</svarsalternativ1>
+      <svarsalternativ2 svar="true">25%</svarsalternativ2>
+      <svarsalternativ3 svar="false">30%</svarsalternativ3>
     </fraga>
     <fraga id="25">
-      <kategori>Etik och regelverk</kategori>
       <text>Vilken bank har den här logotypen?</text>
-      <bild img="/images/logoutext.png"></bild>
-      <svarsalternativ svar="false">SEB</svarsalternativ>
-      <svarsalternativ svar="false">Skandiabanken</svarsalternativ>
-      <svarsalternativ svar="true">JE Banken</svarsalternativ>
+      <hjalp></hjalp>
+      <bild>/images/logoutext.png</bild>
+      <svarsalternativ1 svar="false">SEB</svarsalternativ1>
+      <svarsalternativ2 svar="false">Skandiabanken</svarsalternativ2>
+      <svarsalternativ3 svar="true">JE Banken</svarsalternativ3>
     </fraga>
-  </kategori>-->
-
+  </kategori>
 </fragor>
