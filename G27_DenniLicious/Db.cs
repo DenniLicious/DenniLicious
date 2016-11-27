@@ -163,7 +163,7 @@ namespace G27_DenniLicious
     {
         string sql = "select * from test t"
             + " where t.anvandare_id = '" + valdPerson + "'"
-            + " order by datum desc"
+            + " order by test_id desc"
             + " limit 1";
         dr = sqlFråga(sql);
 
