@@ -50,8 +50,7 @@ namespace G27_DenniLicious
                     tal2 = tal2+3;
                     tal3 = tal3+3;
                     int antalrätta = 0;
-                    //AV
-                    int antalValda = 0;
+
                     int forstaRatta = 0;
                     int tredjeRatta = 0;
 foreach (Svar s in Q.svaren)
