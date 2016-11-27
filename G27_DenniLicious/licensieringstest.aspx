@@ -21,6 +21,7 @@
             <p>Lycka till!</p>
         
     <div id="allafragor" runat="server">
+        <div id="div1" runat="server"></div>
         <div id="f1" runat="server"> </div>
         <div id="h1" runat="server"> </div>
         <asp:Image ID="Image1" runat="server" />
@@ -77,6 +78,7 @@
         <asp:CheckBox ID="CheckBox23" runat="server" />
         <asp:CheckBox ID="CheckBox24" runat="server" />
 
+        <div id="div2" runat="server"></div>
         <div id="f9" runat="server"> </div>
         <div id="h9" runat="server"> </div>
         <asp:Image ID="Image9" runat="server" />
@@ -133,6 +135,7 @@
         <asp:CheckBox ID="CheckBox47" runat="server" />
         <asp:CheckBox ID="CheckBox48" runat="server" />
 
+        <div id="div3" runat="server"></div>
         <div id="f17" runat="server"> </div>
         <div id="h17" runat="server"> </div>
         <asp:Image ID="Image17" runat="server" />

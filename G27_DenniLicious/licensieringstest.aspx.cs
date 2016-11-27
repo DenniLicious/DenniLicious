@@ -196,6 +196,7 @@ namespace G27_DenniLicious
             {
                if(Q.frageId == "1")
                {
+                   div1.InnerText = Q.kategori;
                    f1.InnerText = Q.frageText;
                    h1.InnerText = Q.hjalpText;
                    Image1.ImageUrl = Q.bild;
@@ -252,6 +253,7 @@ namespace G27_DenniLicious
 
                else if (Q.frageId == "9")
                {
+                   div2.InnerText = Q.kategori;
                    f9.InnerText = Q.frageText;
                    h9.InnerText = Q.hjalpText;
                    Image9.ImageUrl = Q.bild;
@@ -308,6 +310,7 @@ namespace G27_DenniLicious
 
                else if (Q.frageId == "17")
                {
+                   div3.InnerText = Q.kategori;
                    f17.InnerText = Q.frageText;
                    h17.InnerText = Q.hjalpText;
                    Image17.ImageUrl = Q.bild;
