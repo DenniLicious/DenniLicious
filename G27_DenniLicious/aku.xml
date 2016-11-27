@@ -3,7 +3,7 @@
 <!--rotelement-->
 <fragor>
     <!--föräldraelement-->
-    <kategori typ="Produkter och hantering av kundens affärer">
+    <kategori typ="Produkter och hantering av kundens affärer" prov="aku2016">
       <!--barnelement-->
       <fraga id="1">
         <!--attribut-->
@@ -48,7 +48,7 @@
       </fraga>
     </kategori>
 
-    <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi">
+    <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi" prov="aku2016">
       <fraga id="6">
         <text>Vad kallas det när en valutas värde stiger i förhållande till andra valutors?</text>
         <hjalp></hjalp>
@@ -91,7 +91,7 @@
       </fraga>
     </kategori>  
 
-  <kategori typ="Etik och regelverk">
+  <kategori typ="Etik och regelverk" prov="aku2016">
     <fraga id="11">
       <text>Hur mycket krävs i kontantinsats enligt Aktiebolagslagen för att starta aktiebolag?</text>
       <hjalp></hjalp>

@@ -15,6 +15,7 @@
             <h3>Bla bla bla.</h3>
 
     <div id="allafragor" runat="server">
+        <div id="div1" runat="server"> </div>
         <div id="f1" runat="server"> </div>
         <div id="h1" runat="server"> </div>
         <asp:Image ID="Image1" runat="server" />
@@ -50,6 +51,7 @@
         <asp:CheckBox ID="CheckBox14" runat="server" />
         <asp:CheckBox ID="CheckBox15" runat="server" />
 
+        <div id="div2" runat="server"></div>
         <div id="f6" runat="server"> </div>
         <div id="h6" runat="server"> </div>
         <asp:Image ID="Image6" runat="server" />
@@ -85,6 +87,7 @@
         <asp:CheckBox ID="CheckBox29" runat="server" />
         <asp:CheckBox ID="CheckBox30" runat="server" />
 
+        <div id="div3" runat="server"></div>
         <div id="f11" runat="server"> </div>
         <div id="h11" runat="server"> </div>
         <asp:Image ID="Image11" runat="server" />

@@ -22,6 +22,15 @@ namespace G27_DenniLicious {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl allafragor;
         
         /// <summary>
+        /// div1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div1;
+        
+        /// <summary>
         /// f1 control.
         /// </summary>
         /// <remarks>
@@ -292,6 +301,15 @@ namespace G27_DenniLicious {
         protected global::System.Web.UI.WebControls.CheckBox CheckBox15;
         
         /// <summary>
+        /// div2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div2;
+        
+        /// <summary>
         /// f6 control.
         /// </summary>
         /// <remarks>
@@ -560,6 +578,15 @@ namespace G27_DenniLicious {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CheckBox30;
+        
+        /// <summary>
+        /// div3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div3;
         
         /// <summary>
         /// f11 control.
