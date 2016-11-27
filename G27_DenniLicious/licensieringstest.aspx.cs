@@ -53,14 +53,16 @@ namespace G27_DenniLicious
                     //AV
                     int antalValda = 0;
                     int forstaRatta = 0;
+                    int tredjeRatta = 0;
+foreach (Svar s in Q.svaren)
+                            {
                     foreach (Control c in allafragor.Controls)
                     {
                         
                         if ((c is CheckBox))
                         {
                             
-                            foreach (Svar s in Q.svaren)
-                            {
+                            
                                 int i = 0;
                                 if (s.ratt1 == "true")
                                 {
@@ -89,23 +91,21 @@ namespace G27_DenniLicious
                                 //Är det ett rätt svarsalternativ
                                 if (i == 1)
                                 {
-                                    if (((CheckBox)c).Checked)
-                                    {
-                                        //Antal Valda
-                                        antalValda++;
-                                        if (antalValda == 1)
-                                        {
+                                  
                                             //Om det är den första checkboxen i frågan den kollar
                                             if (cbIdTal == ((CheckBox)c).ID)
                                             {
                                                 //Den här har jag flyttat upp - AV
                                                 if (((CheckBox)c).Checked)
                                                 {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
                                                         //AV
-                                                        forstaRatta++;
+                                                        //forstaRatta++;
                                                     //Om den cb är ikryssad och det är rätt svarsalternativ
                                                     if (s.ratt1 == "true")
                                                     {
+                                                        forstaRatta++;
                                                         poängräkning++;
                                                     }
                                                 }
@@ -116,9 +116,12 @@ namespace G27_DenniLicious
                                                 //Den här har jag flyttat upp - AV
                                                 if (((CheckBox)c).Checked)
                                                 {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
                                                     //Om den cb är ikryssad och det är rätt svarsalternativ
                                                     if (s.ratt2 == "true")
                                                     {
+                                                        forstaRatta++;
                                                         poängräkning++;
                                                     }
                                                 }
@@ -129,23 +132,51 @@ namespace G27_DenniLicious
                                                 //Den här har jag flyttat upp - AV
                                                 if (((CheckBox)c).Checked)
                                                 {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
                                                     //Om den cb är ikryssad och det är rätt svarsalternativ
-                                                    if (((CheckBox)c).Checked && s.ratt3 == "true")
+                                                    if (s.ratt3 == "true")
                                                     {
+                                                        forstaRatta++;
+                                                        tredjeRatta++;
                                                         poängräkning++;
                                                     }
                                                 }
+                                               
                                             }
+                                     if(Q.svarade > i && forstaRatta == 1)
+                                     {
+                                         poängräkning--;
+                                         Q.svarade = 0;
+                                     }
+
+                                     else if(Q.treSvar == 3 && tredjeRatta ==1)
+                                     {
+                                         poängräkning--;
+
+                                     }
+                                            //if (Q.svar1 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
+
+                                            //if (Q.svar2 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
+
+                                            //if (Q.svar3 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
                                         }
-                                        //AV
-                                    if(antalValda > 1 && forstaRatta == 1)
-                                    {
-                                        poängräkning--;
-                                        antalValda = 0;
-                                    }
-                                    }
-                                    
-                                }
+                                    //    //AV
+                                    //if(antalValda > 1 && forstaRatta == 1)
+                                    //{
+                                    //    poängräkning--;
+                                    //    antalValda = 0;
+                                    //}
+                                  
                                 
                                     //Om två svarsalternativ är rätt
                                     else if (i == 2)
@@ -155,45 +186,58 @@ namespace G27_DenniLicious
                                         //Om det är den första checkboxen i frågan den kollar
                                         if (cbIdTal == ((CheckBox)c).ID)
                                         {
+                                            if (((CheckBox)c).Checked)
+                                            {
+                                                Q.treSvar++;
                                         //Om den cb är ikryssad och det är rätt svarsalternativ
-                                        if (((CheckBox)c).Checked && s.ratt1 == "true")
+                                        if (s.ratt1 == "true")
                                         {
                                             antalrätta++;
-                                            if (antalrätta == 2)
-                                            {
-                                                poängräkning++;
-                                            }
+                                            
                                         }
+                                            }
                                         }
                                     
                                         //Om det är den andra checkboxen i frågan den kollar
                                     if(cbbIdTal == ((CheckBox)c).ID)
                                     {
-                                        //Om den cb är ikryssad och det är rätt svarsalternativ
-                                        if (((CheckBox)c).Checked && s.ratt2 == "true")
+                                        if (((CheckBox)c).Checked)
                                         {
-                                            antalrätta++;
-                                            if (antalrätta == 2)
+                                            Q.treSvar++;
+                                            //Om den cb är ikryssad och det är rätt svarsalternativ
+                                            if (s.ratt2 == "true")
                                             {
-                                                poängräkning++;
+                                                antalrätta++;
+                                                if (antalrätta == 2)
+                                                {
+                                                    poängräkning++;
+                                                }
                                             }
                                         }
                                     }
                                         //Om det är den tredje checkboxen i frågan den kollar
                                     if(cbbbIdTal == ((CheckBox)c).ID)
                                     {
-                                        //Om den cb är ikryssad och det är rätt svarsalternativ
-                                        if (((CheckBox)c).Checked && s.ratt3 == "true")
+                                        if (((CheckBox)c).Checked)
                                         {
-                                            antalrätta++;
-                                            if (antalrätta == 2)
+                                            Q.treSvar++;
+                                            //Om den cb är ikryssad och det är rätt svarsalternativ
+                                            if (s.ratt3 == "true")
                                             {
-                                                poängräkning++;
+                                                antalrätta++;
+                                                if (antalrätta == 2)
+                                                {
+                                                    poängräkning++;
+                                                }
                                             }
                                         }
                                         
                                     }
-
+                                    
+                                        if(Q.treSvar == 3)
+                                        {
+                                            poängräkning--;
+                                        }
                                         
                                     }
                                     //  if (cbbIdTal == ((CheckBox)c).ID)
@@ -216,6 +260,7 @@ namespace G27_DenniLicious
                             }
                         }
                     }
+                rattasvaret.InnerText = poängräkning.ToString();
                 }
             
         

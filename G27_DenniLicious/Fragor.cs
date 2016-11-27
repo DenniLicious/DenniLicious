@@ -26,5 +26,7 @@ namespace G27_DenniLicious
         public string svar1 { get; set; }
         public string svar2 { get; set; }
         public string svar3 { get; set; }
+        public int svarade { get; set; }
+        public int treSvar { get; set; }
     }
 }
