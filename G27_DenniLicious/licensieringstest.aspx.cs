@@ -19,6 +19,8 @@ namespace G27_DenniLicious
             textCb cbb = new textCb();
             textCb cbbb = new textCb();
             int poängräkning;
+            int poängProdukter, poängEkonomi, poängEtik;
+            
             protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -106,6 +108,21 @@ foreach (Svar s in Q.svaren)
                                                     {
                                                         forstaRatta++;
                                                         poängräkning++;
+
+                                                        if(Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -122,6 +139,21 @@ foreach (Svar s in Q.svaren)
                                                     {
                                                         forstaRatta++;
                                                         poängräkning++;
+
+                                                        if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -139,6 +171,21 @@ foreach (Svar s in Q.svaren)
                                                         forstaRatta++;
                                                         tredjeRatta++;
                                                         poängräkning++;
+
+                                                        if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
                                                     }
                                                 }
                                                
@@ -147,11 +194,41 @@ foreach (Svar s in Q.svaren)
                                      {
                                          poängräkning--;
                                          Q.svarade = 0;
+
+                                         if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                         {
+                                             poängProdukter--;
+                                         }
+
+                                         else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                         {
+                                             poängEkonomi--;
+                                         }
+
+                                         else if (Q.kategori == "Etik och regelverk")
+                                         {
+                                             poängEtik--;
+                                         }
                                      }
 
                                      else if(Q.treSvar == 3 && tredjeRatta ==1)
                                      {
                                          poängräkning--;
+
+                                         if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                         {
+                                             poängProdukter--;
+                                         }
+
+                                         else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                         {
+                                             poängEkonomi--;
+                                         }
+
+                                         else if (Q.kategori == "Etik och regelverk")
+                                         {
+                                             poängEtik--;
+                                         }
 
                                      }
                                             //if (Q.svar1 == "Checked")
@@ -210,6 +287,21 @@ foreach (Svar s in Q.svaren)
                                                 if (antalrätta == 2)
                                                 {
                                                     poängräkning++;
+
+                                                    if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                    {
+                                                        poängProdukter++;
+                                                    }
+
+                                                    else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                    {
+                                                        poängEkonomi++;
+                                                    }
+
+                                                    else if (Q.kategori == "Etik och regelverk")
+                                                    {
+                                                        poängEtik++;
+                                                    }
                                                 }
                                             }
                                         }
@@ -227,6 +319,21 @@ foreach (Svar s in Q.svaren)
                                                 if (antalrätta == 2)
                                                 {
                                                     poängräkning++;
+
+                                                    if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                    {
+                                                        poängProdukter++;
+                                                    }
+
+                                                    else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                    {
+                                                        poängEkonomi++;
+                                                    }
+
+                                                    else if (Q.kategori == "Etik och regelverk")
+                                                    {
+                                                        poängEtik++;
+                                                    }
                                                 }
                                             }
                                         }
@@ -236,6 +343,21 @@ foreach (Svar s in Q.svaren)
                                         if(Q.treSvar == 3)
                                         {
                                             poängräkning--;
+
+                                            if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                            {
+                                                poängProdukter--;
+                                            }
+
+                                            else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                            {
+                                                poängEkonomi--;
+                                            }
+
+                                            else if (Q.kategori == "Etik och regelverk")
+                                            {
+                                                poängEtik--;
+                                            }
                                         }
                                         
                                     }
@@ -260,6 +382,7 @@ foreach (Svar s in Q.svaren)
                         }
                     }
                 rattasvaret.InnerText = poängräkning.ToString();
+                alternativen.InnerText = poängProdukter.ToString();
                 }
             
         
