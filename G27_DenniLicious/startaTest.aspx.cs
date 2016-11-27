@@ -11,10 +11,10 @@ namespace G27_DenniLicious
     {
         Db Databas = new Db();
         string[] aktuellA = { "", "", "" , ""};
-
+        int ID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int ID = (int)Session["anvandarId"];
+            ID = (int)Session["anvandarId"];
             aktuellA = Databas.ValdAnvandare(ID);
             
             if (aktuellA[2] == "Nyanställd")
@@ -37,6 +37,8 @@ namespace G27_DenniLicious
             {
                 Response.Redirect("AKUtest.aspx");
             }
+
+            Session["anvandarId"] =  ID;
         }
     }
 }

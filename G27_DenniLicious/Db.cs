@@ -189,5 +189,34 @@ namespace G27_DenniLicious
         return resultatlista;
     }
 
+        public void RegistreraProv(string test_typ, bool godkand, string resultat_totalt, DateTime datum, int anvandare_id, string resultat_produkter, string resultat_ekonomi, string resultat_etik )
+        {
+            string sql = "insert into test (test_typ, godkand, resultat_totalt, datum, anvandare_id, resultat_produkter, resultat_ekonomi, resultat_etik)"
+                + " values (@test_typ, @godkand, @resultat_totalt, @datum, @anvandare_id, @resultat_produkter, @resultat_ekonomi, @resultat_etik)";
+
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@test_typ", test_typ);
+            cmd.Parameters.AddWithValue("@godkand", godkand);
+            cmd.Parameters.AddWithValue("@resultat_totalt", resultat_totalt);
+            cmd.Parameters.AddWithValue("@datum", datum);
+            cmd.Parameters.AddWithValue("@anvandare_id", anvandare_id);
+            cmd.Parameters.AddWithValue("@resultat_produkter", resultat_produkter);
+            cmd.Parameters.AddWithValue("@resultat_ekonomi", resultat_ekonomi);
+            cmd.Parameters.AddWithValue("@resultat_etik", resultat_etik);
+            cmd.ExecuteNonQuery();
+        }
+
+        public void andraBehorighet(int aID)
+        {
+            string sql = "update anvandare set"
+            + " typ = 'Anställd' where id = @aID";
+            
+
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@aID", aID);
+            
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }

@@ -18,14 +18,16 @@ namespace G27_DenniLicious
             textCb cb = new textCb();
             textCb cbb = new textCb();
             textCb cbbb = new textCb();
+            Db Databas = new Db();
             int poängräkning;
             double poängProdukter, poängEkonomi, poängEtik;
             double antalTotal, antalProdukt, antalEkonomi, antalEtik;
             string godkantProv = "Godkänd";
-            
+            int ID;
+            string test_typ;
             protected void Page_Load(object sender, EventArgs e)
         {
-            
+                ID = (int)Session["anvandarId"];
                 HämtaFrågor(XMLToList());
                 CheckBox cbbbbb = new CheckBox();
             
@@ -50,6 +52,7 @@ namespace G27_DenniLicious
                 int tal3 = 0;
                 foreach (Fragor Q in XMLToList())
                 {
+                    test_typ = Q.prov;
                     antalTotal++;
                     tal1 = tal1+3;
                     tal2 = tal2+3;
@@ -379,6 +382,8 @@ foreach (Svar s in Q.svaren)
                                         }
                                         
                                     }
+
+                                ((CheckBox)c).Enabled = false;
                                     //  if (cbbIdTal == ((CheckBox)c).ID)
                                     //{
                                     //    if (((CheckBox)c).Checked && s.ratt1 == "true")
@@ -433,17 +438,27 @@ foreach (Svar s in Q.svaren)
             if ((godkantresultat == "Godkänd") && (godkantProdukt == "Godkänd") && (godkantEkonomi == "Godkänd") && (godkantEtik == "Godkänd"))
             {
                 godkantProv = "Godkänd";
+                string dagensDatum = DateTime.Today.ToShortDateString();
+                DateTime dD = Convert.ToDateTime(dagensDatum);
+                Databas.RegistreraProv("lictest", true, Convert.ToString(procentResultat), dD, ID, Convert.ToString(procentProdukt), Convert.ToString(procentResultat), Convert.ToString(procentResultat));
+                Databas.andraBehorighet(ID);
             }
 
             else
             {
                 godkantProv = "Underkänd";
+                string dagensDatum = DateTime.Today.ToShortDateString();
+                DateTime dD = Convert.ToDateTime(dagensDatum);
+                Databas.RegistreraProv(test_typ, false, Convert.ToString(procentResultat+"%"), dD, ID, Convert.ToString(procentProdukt+"%"), Convert.ToString(procentResultat+"%"), Convert.ToString(procentResultat+"%"));
+                
             }
                 totalPoang.InnerText = "Totalresultat: Du är " +  godkantresultat + ". Antal rätt totalt: " + poängräkning + " av " + antalTotal + " frågor. Dvs. " + procentResultat + "%." ;
                 produktPoang.InnerText = "Produkter och hantering av kundens affärer: Du är " + godkantProdukt+ ". Antal rätt totalt: " + poängProdukter + " av " + antalProdukt + " frågor. Dvs. " + procentProdukt + "%.";
                 ekonomiPoang.InnerText = "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi: Du är " + godkantEkonomi + ". Antal rätt totalt: " + poängEkonomi + " av " + antalEkonomi + " frågor. Dvs. " + procentEkonomi + "%.";
                 etikPoang.InnerText = "Etik och regelverk: Du är " + godkantEtik + ". Antal rätt totalt: " + poängEtik + " av " + antalEtik + " frågor. Dvs. " + procentEtik + "%.";
-                //rattasvaret.InnerText = poängräkning.ToString();
+                btnSkickaLic.Enabled = false;
+            
+            //rattasvaret.InnerText = poängräkning.ToString();
                 //alternativen.InnerText = poängProdukter.ToString();
                 }
             
@@ -895,6 +910,7 @@ foreach (Svar s in Q.svaren)
             {
                 
                 Fragor Q = new Fragor();
+                Q.prov = node.ParentNode.Attributes["prov"].Value;
                 Q.kategori = node.ParentNode.Attributes["typ"].Value;
                 Q.frageText = node["text"].InnerText;
                 Q.hjalpText = node["hjalp"].InnerText;

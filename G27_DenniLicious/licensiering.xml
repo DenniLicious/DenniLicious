@@ -3,7 +3,7 @@
 <!--rotelement-->
 <fragor>
   <!--föräldraelement-->
-  <kategori typ="Produkter och hantering av kundens affärer">
+  <kategori typ="Produkter och hantering av kundens affärer" prov="lictest">
     <!--barnelement-->
     <fraga id="1">
       <!--attribut-->
@@ -72,7 +72,7 @@
   </fraga>
   </kategori>
 
-  <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi">
+  <kategori typ="Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi" prov="lictest">
     <fraga id="9">
       <text>Vad kallas nationalekonomins två huvudavdelningar?</text>
       <hjalp>Två alternativ ska markeras för att få poäng på frågan.</hjalp>
@@ -139,7 +139,7 @@
     </fraga>
   </kategori>
 
-  <kategori typ="Etik och regelverk">
+  <kategori typ="Etik och regelverk" prov="lictest">
     <fraga id="17">
       <text>Om en gäldenär inte betalar en fordran är hen skyldig att erlägga dröjsmålsränta. Dröjsmålsräntan beräknas utifrån Riksbankens referensränta plus X många procentenheter. Hur många?</text>
       <hjalp></hjalp>

@@ -17,7 +17,7 @@ namespace G27_DenniLicious
         public string kategori {get; set;}
         public string frageId {get; set;}
         public string bild { get; set; }
-        
+        public string prov { get; set; }
 
         public string alt1 {get; set;}
         public string alt2 {get; set;}
