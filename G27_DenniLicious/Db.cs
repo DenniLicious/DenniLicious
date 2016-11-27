@@ -218,5 +218,18 @@ namespace G27_DenniLicious
 
             cmd.ExecuteNonQuery();
         }
+
+        public void akuGodkand(int aID)
+        {
+            string sql = "update anvandare set"
+            + " aku = 'true' where id = @aID";
+
+
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@aID", aID);
+
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }

@@ -440,7 +440,7 @@ foreach (Svar s in Q.svaren)
                 godkantProv = "Godkänd";
                 string dagensDatum = DateTime.Today.ToShortDateString();
                 DateTime dD = Convert.ToDateTime(dagensDatum);
-                Databas.RegistreraProv("lictest", true, Convert.ToString(procentResultat), dD, ID, Convert.ToString(procentProdukt), Convert.ToString(procentResultat), Convert.ToString(procentResultat));
+                Databas.RegistreraProv(test_typ, true, Convert.ToString(procentResultat+"%"), dD, ID, Convert.ToString(procentProdukt+"%"), Convert.ToString(procentEkonomi+"%"), Convert.ToString(procentEtik+"%"));
                 Databas.andraBehorighet(ID);
             }
 
@@ -449,7 +449,7 @@ foreach (Svar s in Q.svaren)
                 godkantProv = "Underkänd";
                 string dagensDatum = DateTime.Today.ToShortDateString();
                 DateTime dD = Convert.ToDateTime(dagensDatum);
-                Databas.RegistreraProv(test_typ, false, Convert.ToString(procentResultat+"%"), dD, ID, Convert.ToString(procentProdukt+"%"), Convert.ToString(procentResultat+"%"), Convert.ToString(procentResultat+"%"));
+                Databas.RegistreraProv(test_typ, false, Convert.ToString(procentResultat+"%"), dD, ID, Convert.ToString(procentProdukt+"%"), Convert.ToString(procentEkonomi+"%"), Convert.ToString(procentEtik+"%"));
                 
             }
                 totalPoang.InnerText = "Totalresultat: Du är " +  godkantresultat + ". Antal rätt totalt: " + poängräkning + " av " + antalTotal + " frågor. Dvs. " + procentResultat + "%." ;

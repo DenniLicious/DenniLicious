@@ -11,8 +11,17 @@ namespace G27_DenniLicious
 {
     public partial class AKUtest : System.Web.UI.Page
     {
+        int poängräkning;
+        double poängProdukter, poängEkonomi, poängEtik;
+        double antalTotal, antalProdukt, antalEkonomi, antalEtik;
+        string godkantProv = "Godkänd";
+        string test_typ;
+        Db Databas = new Db();
+        int ID;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            ID = (int)Session["anvandarId"];
             HämtaFrågor(XMLToList());
         }
 
@@ -359,9 +368,424 @@ namespace G27_DenniLicious
 
         protected void btnSkickaAku_Click(object sender, EventArgs e)
         {
+                int tal1 = -2;
+                int tal2 = -1;
+                int tal3 = 0;
+                string dagensDatum = DateTime.Today.ToShortDateString();
+                DateTime dD = Convert.ToDateTime(dagensDatum);
 
+                foreach (Fragor Q in XMLToList())
+                {
+                    test_typ = Q.prov;
+                    antalTotal++;
+                    tal1 = tal1+3;
+                    tal2 = tal2+3;
+                    tal3 = tal3+3;
+                    int antalrätta = 0;
+
+                    int forstaRatta = 0;
+                    int tredjeRatta = 0;
+foreach (Svar s in Q.svaren)
+                            {
+                                if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                {
+                                    antalProdukt++;
+                                }
+
+                                else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                {
+                                    antalEkonomi++;
+                                }
+
+                                else if (Q.kategori == "Etik och regelverk")
+                                {
+                                    antalEtik++;
+                                }                
+
+                    foreach (Control c in allafragor.Controls)
+                    {
+                        
+                        if ((c is CheckBox))
+                        {
+                            
+                            
+                                int i = 0;
+                                if (s.ratt1 == "true")
+                                {
+                                    i++;
+                                }
+
+                                if (s.ratt2 == "true")
+                                {
+                                    i++;
+                                }
+
+                                if (s.ratt3 == "true")
+                                {
+                                    i++;
+                                }
+
+                                //string cbIdTal = s.id.ToString() + ":" + "1";
+                                //string cbbIdTal = s.id.ToString() + ":" + "2";
+                                //string cbbbIdTal = s.id.ToString() + ":" + "3";
+                                string cbIdTal = "CheckBox" + tal1.ToString();
+                                
+                                string cbbIdTal = "CheckBox" + tal2.ToString();
+                                
+                                string cbbbIdTal = "CheckBox" + tal3.ToString();
+                                
+                                //Är det ett rätt svarsalternativ
+                                if (i == 1)
+                                {
+                                  
+                                            //Om det är den första checkboxen i frågan den kollar
+                                            if (cbIdTal == ((CheckBox)c).ID)
+                                            {
+                                                //Den här har jag flyttat upp - AV
+                                                if (((CheckBox)c).Checked)
+                                                {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
+                                                        //AV
+                                                        //forstaRatta++;
+                                                    //Om den cb är ikryssad och det är rätt svarsalternativ
+                                                    if (s.ratt1 == "true")
+                                                    {
+                                                        forstaRatta++;
+                                                        poängräkning++;
+
+                                                        if(Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            //Om det är den andra checkboxen i frågan den kollar
+                                            else if (cbbIdTal == ((CheckBox)c).ID)
+                                            {
+                                                //Den här har jag flyttat upp - AV
+                                                if (((CheckBox)c).Checked)
+                                                {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
+                                                    //Om den cb är ikryssad och det är rätt svarsalternativ
+                                                    if (s.ratt2 == "true")
+                                                    {
+                                                        forstaRatta++;
+                                                        poängräkning++;
+
+                                                        if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            //Om det är den tredje checkboxen i frågan den kollar
+                                            else if (cbbbIdTal == ((CheckBox)c).ID)
+                                            {
+                                                //Den här har jag flyttat upp - AV
+                                                if (((CheckBox)c).Checked)
+                                                {
+                                                    Q.svarade++;
+                                                    Q.treSvar++;
+                                                    //Om den cb är ikryssad och det är rätt svarsalternativ
+                                                    if (s.ratt3 == "true")
+                                                    {
+                                                        forstaRatta++;
+                                                        tredjeRatta++;
+                                                        poängräkning++;
+
+                                                        if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                        {
+                                                            poängProdukter++;
+                                                        }
+
+                                                        else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                        {
+                                                            poängEkonomi++;
+                                                        }
+
+                                                        else if (Q.kategori == "Etik och regelverk")
+                                                        {
+                                                            poängEtik++;
+                                                        }
+                                                    }
+                                                }
+                                               
+                                            }
+                                     if(Q.svarade > i && forstaRatta == 1)
+                                     {
+                                         poängräkning--;
+                                         Q.svarade = 0;
+
+                                         if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                         {
+                                             poängProdukter--;
+                                         }
+
+                                         else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                         {
+                                             poängEkonomi--;
+                                         }
+
+                                         else if (Q.kategori == "Etik och regelverk")
+                                         {
+                                             poängEtik--;
+                                         }
+                                     }
+
+                                     else if(Q.treSvar == 3 && tredjeRatta ==1)
+                                     {
+                                         poängräkning--;
+
+                                         if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                         {
+                                             poängProdukter--;
+                                         }
+
+                                         else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                         {
+                                             poängEkonomi--;
+                                         }
+
+                                         else if (Q.kategori == "Etik och regelverk")
+                                         {
+                                             poängEtik--;
+                                         }
+
+                                     }
+                                            //if (Q.svar1 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
+
+                                            //if (Q.svar2 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
+
+                                            //if (Q.svar3 == "Checked")
+                                            //{
+                                            //    forstaRatta++;
+                                            //}
+                                        }
+                                    //    //AV
+                                    //if(antalValda > 1 && forstaRatta == 1)
+                                    //{
+                                    //    poängräkning--;
+                                    //    antalValda = 0;
+                                    //}
+                                  
+                                
+                                    //Om två svarsalternativ är rätt
+                                    else if (i == 2)
+                                    {
+                                        
+
+                                        //Om det är den första checkboxen i frågan den kollar
+                                        if (cbIdTal == ((CheckBox)c).ID)
+                                        {
+                                            if (((CheckBox)c).Checked)
+                                            {
+                                                Q.treSvar++;
+                                        //Om den cb är ikryssad och det är rätt svarsalternativ
+                                        if (s.ratt1 == "true")
+                                        {
+                                            antalrätta++;
+                                            
+                                        }
+                                            }
+                                        }
+                                    
+                                        //Om det är den andra checkboxen i frågan den kollar
+                                    if(cbbIdTal == ((CheckBox)c).ID)
+                                    {
+                                        if (((CheckBox)c).Checked)
+                                        {
+                                            Q.treSvar++;
+                                            //Om den cb är ikryssad och det är rätt svarsalternativ
+                                            if (s.ratt2 == "true")
+                                            {
+                                                antalrätta++;
+                                                if (antalrätta == 2)
+                                                {
+                                                    poängräkning++;
+
+                                                    if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                    {
+                                                        poängProdukter++;
+                                                    }
+
+                                                    else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                    {
+                                                        poängEkonomi++;
+                                                    }
+
+                                                    else if (Q.kategori == "Etik och regelverk")
+                                                    {
+                                                        poängEtik++;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                        //Om det är den tredje checkboxen i frågan den kollar
+                                    if(cbbbIdTal == ((CheckBox)c).ID)
+                                    {
+                                        if (((CheckBox)c).Checked)
+                                        {
+                                            Q.treSvar++;
+                                            //Om den cb är ikryssad och det är rätt svarsalternativ
+                                            if (s.ratt3 == "true")
+                                            {
+                                                antalrätta++;
+                                                if (antalrätta == 2)
+                                                {
+                                                    poängräkning++;
+
+                                                    if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                                    {
+                                                        poängProdukter++;
+                                                    }
+
+                                                    else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                                    {
+                                                        poängEkonomi++;
+                                                    }
+
+                                                    else if (Q.kategori == "Etik och regelverk")
+                                                    {
+                                                        poängEtik++;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                        if(Q.treSvar == 3)
+                                        {
+                                            poängräkning--;
+
+                                            if (Q.kategori == "Produkter och hantering av kundens affärer")
+                                            {
+                                                poängProdukter--;
+                                            }
+
+                                            else if (Q.kategori == "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi")
+                                            {
+                                                poängEkonomi--;
+                                            }
+
+                                            else if (Q.kategori == "Etik och regelverk")
+                                            {
+                                                poängEtik--;
+                                            }
+                                        }
+                                        
+                                    }
+
+                                ((CheckBox)c).Enabled = false;
+                                    //  if (cbbIdTal == ((CheckBox)c).ID)
+                                    //{
+                                    //    if (((CheckBox)c).Checked && s.ratt1 == "true")
+                                    //    {
+                                    //        poängräkning++;
+                                    //    }
+                                    //}
+
+                                    //else if (cbbbIdTal == ((CheckBox)c).ID)
+                                    //{
+                                    //    if (((CheckBox)c).Checked && s.ratt3 == "true")
+                                    //    {
+                                    //        poängräkning++;
+                                    //    }
+                                    //}
+                                   }
+                            
+                            }
+                        }
+                    }
+
+                double procentResultat = (poängräkning / antalTotal) * 100;
+                double procentProdukt = (poängProdukter / antalProdukt) * 100;
+                double procentEkonomi = (poängEkonomi / antalEkonomi) * 100;
+                double procentEtik = (poängEtik / antalEtik) * 100;
+
+                string godkantresultat = "Underkänd";
+                string godkantProdukt = "Underkänd";
+                string godkantEkonomi = "Underkänd";
+                string godkantEtik = "Underkänd";
+
+            if(procentResultat >= 70)
+            {
+                godkantresultat = "Godkänd";
+            }
+
+            if(procentProdukt >= 60)
+            {
+                godkantProdukt = "Godkänd";
+            }
+
+            if(procentEkonomi >= 60)
+            {
+                godkantEkonomi = "Godkänd";
+            }
+
+            if(procentEtik >= 60)
+            {
+                godkantEtik = "Godkänd";
+            }
+
+            if ((godkantresultat == "Godkänd") && (godkantProdukt == "Godkänd") && (godkantEkonomi == "Godkänd") && (godkantEtik == "Godkänd"))
+            {
+                godkantProv = "Godkänd";
+                
+                Databas.akuGodkand(ID);
+                Databas.RegistreraProv(test_typ, true, Convert.ToString(procentResultat+"%"), dD, ID, Convert.ToString(procentProdukt+"%"), Convert.ToString(procentEkonomi+"%"), Convert.ToString(procentEtik+"%"));
+            }
+
+            else
+            {
+                godkantProv = "Underkänd";
+                Databas.RegistreraProv(test_typ, false, Convert.ToString(procentResultat + "%"), dD, ID, Convert.ToString(procentProdukt + "%"), Convert.ToString(procentEkonomi + "%"), Convert.ToString(procentEtik + "%"));
+                
+                
+            }
+                totalPoang.InnerText = "Totalresultat: Du är " +  godkantresultat + ". Antal rätt totalt: " + poängräkning + " av " + antalTotal + " frågor. Dvs. " + procentResultat + "%." ;
+                produktPoang.InnerText = "Produkter och hantering av kundens affärer: Du är " + godkantProdukt+ ". Antal rätt totalt: " + poängProdukter + " av " + antalProdukt + " frågor. Dvs. " + procentProdukt + "%.";
+                ekonomiPoang.InnerText = "Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi: Du är " + godkantEkonomi + ". Antal rätt totalt: " + poängEkonomi + " av " + antalEkonomi + " frågor. Dvs. " + procentEkonomi + "%.";
+                etikPoang.InnerText = "Etik och regelverk: Du är " + godkantEtik + ". Antal rätt totalt: " + poängEtik + " av " + antalEtik + " frågor. Dvs. " + procentEtik + "%.";
+                btnSkickaAku.Enabled = false;
+
+            
+            
+            //rattasvaret.InnerText = poängräkning.ToString();
+                //alternativen.InnerText = poängProdukter.ToString();
+                }
         }
 
        
     }
-}
