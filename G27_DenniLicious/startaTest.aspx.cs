@@ -14,6 +14,8 @@ namespace G27_DenniLicious
         int ID;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Tar fram ID:et ur session så vi kan skapa en array av vald användare igen.
+            //Lägger in den personen som metoden plockar fram och tilldelar värden(id, namn, typ, aku) från databasen till en array.
             ID = (int)Session["anvandarId"];
             aktuellA = Databas.ValdAnvandare(ID);
             
